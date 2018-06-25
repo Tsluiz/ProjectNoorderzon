@@ -5,9 +5,6 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface LocatieRepository extends JpaRepository<!-User-!, Integer> {
-	User findByProgramNameEquals(String programname);
-
-	User deleteById(int id);
+public interface LocatieRepository extends JpaRepository<Locatie, Integer> {
 
 }

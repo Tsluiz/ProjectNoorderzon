@@ -15,10 +15,21 @@ import java.util.List;
 @RestController
 @CrossOrigin
 public class Controller {
-	@RequestMapping("/database")
+
+	@PersistenceContext
+	private EntityManager em;
+
+	@RequestMapping("/controller")
 	public Database database(@RequestParam("") int a, @RequestParam("b") int b) {
 		return new Database(a, b);
 	}
+
+	@RequestMapping(value = "/toonVoorstelling")
+	public Voorstelling zoekVoorstellingBijNaam(
+			@RequestParam(value = "voorstelling") String naam) {
+		return zoekVoorstellingBijNaam(naam);
+	}
+
 }
 
 	/*
@@ -44,12 +55,7 @@ public class Controller {
 		return null;
 	}
 
-	@RequestMapping(value = "/findprogram")
-	public Program findProgram(
-			@RequestParam(value = "program") String name) {
-		return programService.findProgramByProgramName(name);
 
-	}
 
 	@PostMapping(value = "/add", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public ResponseEntity<Program> add(
