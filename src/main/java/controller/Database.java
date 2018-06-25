@@ -18,6 +18,25 @@ public class Database implements AutoCloseable {
 
 
     /**
+     * De verbinding om het totale programma te tonen
+     *
+     */
+    public Voorstelling showAlleVoorstellingen() {
+        EntityManager em = emf.createEntityManager();
+        try {
+            TypedQuery<Voorstelling> q = em.createQuery(
+                    "SELECT v FROM Entities.Voorstelling v WHERE v.genre = :genre", Voorstelling.class);
+            Voorstelling.class);
+            q.setParameter("naamvanartiest", artiest.getNaam());
+            for (Voorstelling v : q.getResultList()) {
+                return v.getDetails(); // uitzoeken hoe die methode heet
+            }
+        } finally {
+            em.close();
+        }
+    }
+
+    /**
      * hier moet de artiest opgehaald worden uit het webformulier
      * daarna moeten de voorstellingen met die artiest worden teruggegeven aan de front-end
      * mv
@@ -26,12 +45,11 @@ public class Database implements AutoCloseable {
 		EntityManager em = emf.createEntityManager();
 		try {
         	TypedQuery<Voorstelling> q = em.createQuery(
-                "SELECT v FROM Entities.Voorstelling v WHERE v.artiest CONTAINS :naamvanartiest",
+                "SELECT v FROM Entities.Voorstelling v WHERE v.artiest HAVING :naamvanartiest",
                 Voorstelling.class);
-        q.setParameter("naamvanartiest", NaamVanArtiest)
+        q.setParameter("naamvanartiest", artiest.getNaam());
         for (Voorstelling v : q.getResultList()) {
             return v.getDetails(); // uitzoeken hoe die methode heet
-            // moet ik ook iets doen met catch en try en finally en close?
         }
 		} finally {
 			em.close();
@@ -43,27 +61,41 @@ public class Database implements AutoCloseable {
      * daarna moeten de voorstellingen met die naam worden teruggegeven aan de front-end
      * mv
      */
-    public Voorstelling zoekVoorstellingOpNaam(DeelVanNaam) {
-        String DeelVanNaam = reader.getInputVanFormulierOfzo // hoe komen we aan die input?
-        TypedQuery<Voorstelling> q = em.createQuery(
-                "SELECT v FROM Entities.Voorstelling v WHERE v.name CONTAINS :deelvannaam", Voorstelling.class);
-        q.setParameter("deelvannaam", DeelVanNaam)
-        for (Voorstelling v : q.getResultList()) {
-            return v.getDetails(); // uitzoeken hoe die methode heet
-        } // moet ik ook iets doen met catch en try en finally en close?
+    public Voorstelling zoekVoorstellingOpNaam(String zoekNaam) {
+        EntityManager em = emf.createEntityManager();
+        try {
+            TypedQuery<Voorstelling> q = em.createQuery(
+                    "SELECT v FROM Entities.Voorstelling v WHERE v.name CONTAINS :deelvannaam", Voorstelling.class);
+                    Voorstelling.class);
+            q.setParameter("naamvanartiest", artiest.getNaam());
+            for (Voorstelling v : q.getResultList()) {
+                return v.getDetails(); // uitzoeken hoe die methode heet
+            }
+        } finally {
+            em.close();
+        }
     }
+
     /**
      * hier moet het genre van de voorstelling opgehaald worden uit het webformulier
      * daarna moeten de voorstellingen in dat genre worden teruggegeven aan de front-end
      * mv
      */
     public Voorstelling zoekVoorstellingOpGenre(Genre) {
-        String Genre = reader.getInputVanFormulierOfzo // hoe komen we aan die input?
-        TypedQuery<Voorstelling> q = em.createQuery(
-                "SELECT v FROM Entities.Voorstelling v WHERE v.genre = :genre", Voorstelling.class);
-        q.setParameter("genre", Genre)
-        for (Voorstelling v : q.getResultList()) {
-            return v.getDetails(); // uitzoeken hoe die methode heet
-        }// moet ik ook iets doen met catch en try en finally en close?
+        EntityManager em = emf.createEntityManager();
+        try {
+            TypedQuery<Voorstelling> q = em.createQuery(
+                    "SELECT v FROM Entities.Voorstelling v WHERE v.genre = :genre", Voorstelling.class);
+            Voorstelling.class);
+            q.setParameter("naamvanartiest", artiest.getNaam());
+            for (Voorstelling v : q.getResultList()) {
+                return v.getDetails(); // uitzoeken hoe die methode heet
+            }
+        } finally {
+            em.close();
+        }
     }
+
+
+
 }
