@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" id="invoerProgramma" method="post" target="_self">
+    <fieldset>
+        <legend>Voer Programma onderdeel in: </legend>
+        Programma titel
+        <input type="text" name="programmaTitel" placeholder="Programma titel" required>
+        <label>Voeg beschrijving toe
+            <textarea name="beschrijving"> </textarea>
+        </label>
+        <label>
+            Naam organisator
+            <input type="text" name="organisatorNaam" placeholder="Naam organisator" required>
+        </label>
+        <label>
+            E-mail organisator
+            <input type="email" name="email">
+        </label>
+        <label>
+            Telefoon organisator
+            <input type="tel" name="usrtel">
+        </label>
+        <label>
+            Kies locatie
+            <select name="locatie" required>
+                <option value="volvo">Volvo</option>
+            </select>
+        </label>
+        <label>
+            Kies Categorie
+            <select name="categorie" required>
+                <option value="volvo">Volvo</option>
+            </select>
+        </label>
+        <label>Kies slot
+            <input type="checkbox" name="speeldag1" value="slotmaandag"> Maandag <br>
+        </label>
+        <label>
+            Kies speeltijd
+            <input type="checkbox" name="speeltijd1" value="1700"> 17:00 uur <br>
+        </label>
+        <label>
+            Voeg plaatjes toe
+            <input type="file" name="pic" accept="image/*">
+        </label>
+        <label>
+            Voeg muziek toe
+            <input type="file" name="pic" accept="audio/*">
+        </label>
+        <button type="button" name="submit" onclick="alert('Hello World!')" formmethod="post"> Verstuur programma onderdeel </button>
+    </fieldset>
+</form>
+</body>
+</html>
