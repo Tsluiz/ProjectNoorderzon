@@ -64,8 +64,19 @@ body, button {
   font-size: 20px;
   color: #4a4a4a;
     background-color: #eee;
+    background: url(../images/body-bg-left.jpg) left bottom no-repeat;
+
 }
 
+h2 {
+    font-size: 50px;
+}
+
+.container {
+
+}
+
+/* -- Start page --  */
 .start {
   position: fixed;
  /* transform: 1s ease-out; */
@@ -118,41 +129,169 @@ body, button {
     margin-bottom: 10px;
 }
 
-.hidden {
-    display:none;
-}
+/* -- Top menu --  */
 
 .top-bar {
     padding: 5px 20px;
     vertical-align: bottom;
-    background-color: #fff;
+    background-color: #eeeeee;
+    box-shadow: 0px 0px 2px 2px #aaaaaa;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 15;
+    height: 40px;
+}
+
+.top-bar img {
+    height: 30px;
 }
 
 .top-menu {
     float: right;
     border-bottom: 1px;
     border-color: #4a4a4a;
+    color: #91C8AA;
+    vertical-align: bottom;
+
+}
+
+.top-menu a {
+    color: #91C8AA;
+    vertical-align: bottom;
 }
 
 .top-menu ul {
-    vertical-align: text-bottom;
+    vertical-align: bottom;
+    margin-top: 20px;
+
 }
 
 .top-menu li {
+
     display: inline;
     vertical-align: text-bottom;
-    margin: 0 10px;
+    margin: 25px;
+    font-size: 25px;
 }
 
+/* -- Navigation menu --  */
+.navigation {
+    background: url("../images/nav-bg-new.jpg") no-repeat center top;
+    min-height: 200px;
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: -90px;
+}
+
+/* -- Section  test--  */
+.section-header2 {
+    position: absolute;
+    top: 50px;
+    left: 60%;
+    z-index: 10;
+}
+
+.section-img2 img {
+    height: 400px;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+}
+
+.section-img2 li {
+    display: inline;
+}
+
+.section-img3 {
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 20px 20px black;
+}
+
+@media (max-width: 1200px) {
+    .section-img-3 {
+        z-index: 1;
+    }
+}
+
+.section-img-3 img {
+    margin-left: -140px;
+}
+
+.section-title-3 {
+    position: absolute;
+    padding: 5px;
+    bottom: 24%;
+    left: 2em;
+    border: 0px solid #fff;
+    border-radius: 4px;
+    font-size: 65px;
+    text-transform: uppercase;
+    color: #fff;
+    width: 180px;
+    text-align: left;
+/ /;
+}
+
+@media (max-width: 1200px) {
+    .section-title-3 {
+        background-color: rgba(50, 50, 50, 0.1);
+        left: 0;
+        bottom: 0;
+        z-index: 10 \;
+    }
+}
+
+.img-test-2 {
+    float: left;
+    width: 50%;
+}
+
+.block li {
+    display: inline;
+}
+
+.block img {
+    width: 250px;
+}
+
+/* -- Section --  */
 .section {
     margin: 25px 0;
+}
+
+.section-img {
+    height: 400px;
+}
+
+.section-img img {
+    width: 500px;
+}
+
+.section-header {
+    text-transform: uppercase;
+    font-size: 24px;
+    text-align: center;
+}
+
+.item-img img {
+    opacity: 0.5;
+}
+
+.img-test {
+    float: left;
+    width: 25%;
+}
+
+.img-test img {
+    width: 100%;
 }
 
 .section-title {
     position: absolute;
     padding: 5px;
     top: 10px;
-    left: 17em;
+    left: 25em;
     border: 2px solid #fff;
     border-radius: 4px;
     font-size: 18px;
@@ -163,24 +302,59 @@ body, button {
     background-color: rgba(50, 50, 50, 0.3);
 }
 
+.invert {
+    border-color: #4a4a4a;
+    color: #4a4a4a;
+    background-color: rgba(200, 200, 200, 0.3);
+}
+
+/* -- Section items --  */
 .items {
-
-    margin-top: 60px;
+    margin-top: 10%;
     height: 320px;
-/ / padding: 10 px 20 px;
+    padding: 10px 20px;
 }
 
-.line-up li {
-
+.items img:hover {
+    -webkit-transition: all 150ms ease-in;
+    -webkit-transform: scale(1.05);
+    -ms-transition: all 150ms ease-in;
+    -ms-transform: scale(1.05);
+    -moz-transition: all 150ms ease-in;
+    -moz-transform: scale(1.05);
+    transition: all 150ms ease-in;
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
-.line-up img {
-    text-align: right;
-}
-
+/*
 .line-up p {
-    margin-top: -30px;
+    padding-top: -30px;
     color: #fff;
     text-align: right;
     margin-right: 25px;
+}
+*/
+.items p {
+    position: absolute;
+    padding: 5px;
+    left: 23em;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    font-size: 18px;
+    color: #fff;
+    width: 220px;
+    text-align: center;
+    background-color: rgba(50, 50, 50, 0.3);
+    margin-top: -40px;
+}
+
+/* -- Footer --  */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    height: 120px;
+    background-color: #4a4a4a;
+    color: #eee;
 }
