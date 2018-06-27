@@ -1,4 +1,6 @@
-package application;
+package entities;
+
+import entities.Artiest;
 
 import javax.persistence.*;
 import java.util.List;
