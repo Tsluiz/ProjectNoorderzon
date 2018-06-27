@@ -238,13 +238,18 @@ h2 {
         background-color: rgba(50, 50, 50, 0.1);
         left: 0;
         bottom: 0;
-        z-index: 10 \;
+        z-index: 10;
     }
 }
 
 .img-test-2 {
     float: left;
     width: 50%;
+}
+
+.block {
+    margin: auto;
+    text-align: center;
 }
 
 .block li {
@@ -313,6 +318,11 @@ h2 {
     margin-top: 10%;
     height: 320px;
     padding: 10px 20px;
+    margin: auto;
+}
+
+.line-up img {
+    vertical-align: middle;
 }
 
 .items img:hover {
