@@ -6,10 +6,10 @@
 
     <persistence-unit name="Noorderzon_data">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <class>application.Artiest</class>
-        <class>application.Locatie</class>
-        <class>application.Tijd</class>
-        <class>application.Voorstelling</class>
+        <class>entities.Artiest</class>
+        <class>entities.Locatie</class>
+        <class>entities.Tijd</class>
+        <class>entities.Voorstelling</class>
         <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/..." />
             <property name="javax.persistence.jdbc.user" value="..." />

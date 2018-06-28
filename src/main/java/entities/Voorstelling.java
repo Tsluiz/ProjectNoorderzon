@@ -1,4 +1,4 @@
-package application;
+package entities;
 
 import javax.persistence.*;
 
@@ -11,11 +11,11 @@ public class Voorstelling {
     @JoinColumn (name = "naam")
     private Artiest id;
 
-    @Column
-    private String naam;
-
-    @Column
+    @Column (name = "capaciteit")
     private int capaciteit;
+//in de database is het type een varchar/string,
+//maar kunnen we er dan nog wel mee rekenen?
+
 
     public Artiest getId() {
         return id;
@@ -23,14 +23,6 @@ public class Voorstelling {
 
     public void setId(Artiest id) {
         this.id = id;
-    }
-
-    public String getNaam() {
-        return naam;
-    }
-
-    public void setNaam(String naam) {
-        this.naam = naam;
     }
 
     public int getCapaciteit() {

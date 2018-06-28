@@ -1,24 +1,26 @@
-package application;
+package entities;
+
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
-@Table (name = "tijd")
+@Table(name = "tijd")
 public class Tijd {
 
-    @Column
+    @Column(name = "iddag")
     @Id
     private int id;
 
-    @Column
+    @Column(name = "dag")
     private String dag;
 
-    @Column
+    @Column(name = "tijdstip")
     private String tijdstip;
 
-    @ManyToOne
-    @JoinColumn (name = "id")
-    private Voorstelling voorstellingPerTijd;
+    @OneToMany(mappedBy = "id")
+    private List<Voorstelling> voorstellingPerTijdslot;
+
 
     public int getId() {
         return id;
@@ -44,11 +46,12 @@ public class Tijd {
         this.tijdstip = tijdstip;
     }
 
-    public Voorstelling getVoorstellingPerTijd() {
-        return voorstellingPerTijd;
+    public List<Voorstelling> getVoorstellingPerTijdslot() {
+        return voorstellingPerTijdslot;
     }
 
-    public void setVoorstellingPerTijd(Voorstelling voorstellingPerTijd) {
-        this.voorstellingPerTijd = voorstellingPerTijd;
+    public void setVoorstellingPerTijdslot(List<Voorstelling> voorstellingPerTijdslot) {
+        this.voorstellingPerTijdslot = voorstellingPerTijdslot;
     }
 }
+

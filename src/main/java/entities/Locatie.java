@@ -1,4 +1,4 @@
-package application;
+package entities;
 
 import javax.persistence.*;
 import java.util.List;
@@ -12,10 +12,11 @@ public class Locatie {
     private String naam;
 
     @Column(name = "capaciteit")
-    private int capaciteit;
+    private int maxCapaciteit;
 
     @OneToMany (mappedBy = "naam")
     private List<Artiest> artiestenVanDezeLocatie;
+
 
     public String getNaam() {
         return naam;
@@ -25,12 +26,12 @@ public class Locatie {
         this.naam = naam;
     }
 
-    public int getCapaciteit() {
-        return capaciteit;
+    public int getMaxCapaciteit() {
+        return maxCapaciteit;
     }
 
-    public void setCapaciteit(int capaciteit) {
-        this.capaciteit = capaciteit;
+    public void setMaxCapaciteit(int maxCapaciteit) {
+        this.maxCapaciteit = maxCapaciteit;
     }
 
     public List<Artiest> getArtiestenVanDezeLocatie() {
@@ -41,4 +42,5 @@ public class Locatie {
         this.artiestenVanDezeLocatie = artiestenVanDezeLocatie;
     }
 }
+
 
