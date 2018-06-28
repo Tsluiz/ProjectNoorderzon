@@ -1,24 +1,25 @@
 package entities;
 
+
 import javax.persistence.*;
 
 @Entity
 @Table (name = "tijd")
 public class Tijd {
 
-    @Column
+    @Column (name = "iddag")
     @Id
     private int id;
 
-    @Column
+    @Column (name = "dag")
     private String dag;
 
-    @Column
+    @Column (name = "tijdstip")
     private String tijdstip;
 
     @ManyToOne
     @JoinColumn (name = "id")
-    private Voorstelling voorstellingPerTijd;
+    private Voorstelling voorstellingPerTijdslot;
 
     public int getId() {
         return id;
@@ -44,11 +45,12 @@ public class Tijd {
         this.tijdstip = tijdstip;
     }
 
-    public Voorstelling getVoorstellingPerTijd() {
-        return voorstellingPerTijd;
+    public Voorstelling getVoorstellingPerTijdslot() {
+        return voorstellingPerTijdslot;
     }
 
-    public void setVoorstellingPerTijd(Voorstelling voorstellingPerTijd) {
-        this.voorstellingPerTijd = voorstellingPerTijd;
+    public void setVoorstellingPerTijdslot(Voorstelling voorstellingPerTijdslot) {
+        this.voorstellingPerTijdslot = voorstellingPerTijdslot;
     }
 }
+

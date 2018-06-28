@@ -1,17 +1,21 @@
 package entities;
 
+
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @Table (name = "artiest")
 public class Artiest {
-    @Column
+    @Column (name = "naam")
     @Id
     private String naam;
 
-    @Column
+    @Column (name = "genre")
     private String genre;
+
+    @Column (name = "naam_voorstelling")
+    private String naamVoorstelling;
 
     @OneToMany (mappedBy = "id")
     private List<Voorstelling> voorstellingenVanArtiest;
@@ -32,6 +36,14 @@ public class Artiest {
         this.genre = genre;
     }
 
+    public String getNaamVoorstelling() {
+        return naamVoorstelling;
+    }
+
+    public void setNaamVoorstelling(String naamVoorstelling) {
+        this.naamVoorstelling = naamVoorstelling;
+    }
+
     public List<Voorstelling> getVoorstellingenVanArtiest() {
         return voorstellingenVanArtiest;
     }
@@ -40,3 +52,4 @@ public class Artiest {
         this.voorstellingenVanArtiest = voorstellingenVanArtiest;
     }
 }
+
