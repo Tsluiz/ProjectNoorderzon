@@ -2,58 +2,102 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Noorderzon 2018 festival">
+    <meta name="keywords" content="HTML,study">
+    <meta name="author" content="Tom met wat dingetjes van Marike">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>invoer</title>
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/functions.js"></script>
 </head>
 <body>
-<form action="" id="invoerProgramma" method="post" target="_self">
-    <fieldset>
-        <legend>Voer Programma onderdeel in: </legend>
-        Programma titel
-        <input type="text" name="programmaTitel" placeholder="Programma titel" required>
-        <label>Voeg beschrijving toe
-            <textarea name="beschrijving"> </textarea>
-        </label>
-        <label>
-            Naam organisator
-            <input type="text" name="organisatorNaam" placeholder="Naam organisator" required>
-        </label>
-        <label>
-            E-mail organisator
-            <input type="email" name="email">
-        </label>
-        <label>
-            Telefoon organisator
-            <input type="tel" name="usrtel">
-        </label>
-        <label>
-            Kies locatie
-            <select name="locatie" required>
-                <option value="volvo">Volvo</option>
-            </select>
-        </label>
-        <label>
-            Kies Categorie
-            <select name="categorie" required>
-                <option value="volvo">Volvo</option>
-            </select>
-        </label>
-        <label>Kies slot
-            <input type="checkbox" name="speeldag1" value="slotmaandag"> Maandag <br>
-        </label>
-        <label>
-            Kies speeltijd
-            <input type="checkbox" name="speeltijd1" value="1700"> 17:00 uur <br>
-        </label>
-        <label>
-            Voeg plaatjes toe
-            <input type="file" name="pic" accept="image/*">
-        </label>
-        <label>
-            Voeg muziek toe
-            <input type="file" name="pic" accept="audio/*">
-        </label>
-        <button type="button" name="submit" onclick="alert('Hello World!')" formmethod="post"> Verstuur programma onderdeel </button>
-    </fieldset>
-</form>
+
+<div class="top-bar">
+    <img src="images/logo-small.png">
+    <ul class="top-menu">
+        <li><a href="index.html">home</a></li>
+        <li><a href="pages/line-up.html">line-up</a></li>
+        <li><a href="pages/programma.html">programma</a></li>
+        <li><a href="#contact">contact</a></li>
+
+    </ul>
+</div>
+<div class="navigation">
+    <div class="logo"></div>
+    <div class="navigation-flow"></div>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div>
+    <form action="" id="invoerProgramma" method="post" target="_self">
+        <fieldset>
+            <legend>Voer Programma onderdeel in: </legend><br/>
+            Programma titel
+            <input type="text" name="programmaTitel" placeholder="Programma titel" required>
+            <label>Voeg beschrijving toe
+                <textarea name="beschrijving"> </textarea>
+                <!--is het ook mooier om hier een <input>ding van te maken?-->
+            </label><br/>
+            <label>
+                Naam organisator
+                <input type="text" name="organisatorNaam" placeholder="Naam organisator" required>
+            </label>
+            <label>
+                E-mail organisator
+                <input type="email" name="email">
+                <!--is het ook mooier om hier een <input>ding van te maken?-->
+            </label>
+            <label>
+                Telefoon organisator
+                <input type="tel" name="usrtel">
+            </label><br/>
+            <label>
+                Selecteer Locatie
+                <select name="locatie" required>
+                    <option value="volvo">Volvo</option>
+                    <!--nog locaties toevoegen of ophalen uit de database-->
+                </select>
+            </label><br/>
+            <label>
+                Selecteer Genre
+                <select name="categorie" required>
+                    <option value="volvo">Volvo</option>
+                    <!--nog genres toevoegen of ophalen uit de database-->
+                </select>
+            </label><br/>
+            <label>Selecteer Tijdslot
+                <input type="checkbox" name="speeldag1" value="slotmaandag"> Maandag <br>
+            </label><br/>
+            <label>
+                Selecteer Speeltijd
+                <input type="checkbox" name="speeltijd1" value="1700"> 17:00 uur <br>
+            </label><br/>
+            <!-- dringend advies van Ralf om dit niet te doen
+                   <label>
+                        Voeg plaatjes toe
+                        <input type="file" name="pic" accept="image/*">
+                    </label><br/>
+                    <label>
+                        Voeg muziek toe
+                        <input type="file" name="pic" accept="audio/*">
+                    </label><br/>-->
+            <button type="button" name="submit" onclick="alert('Hello World!')"
+                    formmethod="post"> Verstuur programma onderdeel </button>
+            <!--in het zoekformulier heb ik hier gebruik gemaakt van
+            <input type="submit" value="xxxx">
+            dus niet met button...
+            -->
+        </fieldset>
+    </form>
+</div>
 </body>
 </html>
