@@ -156,7 +156,7 @@ h3 {
     padding: 5px 20px;
     vertical-align: bottom;
     background-color: #eeeeee;
-    box-shadow: 0px 0px 2px 2px #aaaaaa;
+    box-shadow: 0 0 2px 2px #aaaaaa;
     position: fixed;
     width: 100vw;
     top: 0;
@@ -245,7 +245,7 @@ h3 {
     padding: 5px;
     bottom: 24%;
     left: 2.8em;
-    border: 0px solid #fff;
+    border: 0 solid #fff;
     border-radius: 4px;
     font-size: 65px;
     text-transform: uppercase;
@@ -428,6 +428,7 @@ h3 {
 
 #search-form input[type="text"] {
     width: 50%;
+    margin-top: 1px;
 }
 
 @media (max-width: 767px) {
@@ -438,6 +439,8 @@ h3 {
 
 #search-form input[type="submit"] {
     width: 30%;
+    font-size: 16px;
+    padding: 5px;
 }
 
 @media (max-width: 767px) {
@@ -446,8 +449,16 @@ h3 {
     }
 }
 
+#search-form input[type="radio"] {
+    margin: 10px 15px;
+}
+
+#search-form input {
+/ / font-size: 10 px;
+}
+
 input[type="radio"] {
-    margin: 0 15px;
+
 }
 
 /* -- Footer --  */
