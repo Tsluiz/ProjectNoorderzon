@@ -13,13 +13,9 @@ public class Locatie {
 
     @Column(name = "capaciteit")
     private int maxCapaciteit;
-    // om onderscheid te maken met het veld capaciteit bij Voorstelling,
-    // heb ik hier max voor gezet.
 
     @OneToMany (mappedBy = "naam")
     private List<Artiest> artiestenVanDezeLocatie;
-    // in de database is dit ManyToOne
-    // maar volgens mij moet het OnToMany zijn...
 
 
     public String getNaam() {

@@ -17,8 +17,13 @@ public class Artiest {
     @Column (name = "naam_voorstelling")
     private String naamVoorstelling;
 
+    @ManyToOne
+    @JoinColumn (name = "locatie_naam")
+    private Locatie vasteLocatie;
+
     @OneToMany (mappedBy = "id")
     private List<Voorstelling> voorstellingenVanArtiest;
+
 
     public String getNaam() {
         return naam;
@@ -48,8 +53,18 @@ public class Artiest {
         return voorstellingenVanArtiest;
     }
 
+    public Locatie getLocatie() {
+        return vasteLocatie;
+    }
+
+    public void setLocatie(Locatie locatie) {
+        this.vasteLocatie = locatie;
+    }
+
     public void setVoorstellingenVanArtiest(List<Voorstelling> voorstellingenVanArtiest) {
         this.voorstellingenVanArtiest = voorstellingenVanArtiest;
+
+
     }
 }
 
