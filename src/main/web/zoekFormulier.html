@@ -17,55 +17,81 @@
 </head>
 <body>
 
+
 <div class="top-bar">
     <img src="images/logo-small.png">
-    <ul class="top-menu">
-        <li><a href="index.html">home</a></li>
-        <li><a href="pages/line-up.html">line-up</a></li>
-        <li><a href="pages/programma.html">programma</a></li>
-        <li><a href="#contact">contact</a></li>
-
-    </ul>
+    <div class="top-menu">
+        <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="pages/line-up.html">line-up</a></li>
+            <li><a href="pages/programma.html">programma</a></li>
+            <li><a href="#contact">contact</a></li>
+        </ul>
+    </div>
 </div>
-
 <div class="navigation">
     <div class="logo"></div>
     <div class="navigation-flow"></div>
-</div>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<div>
-    <form action="hierwebpaginanoginvullen" method="get" id="zoekformulier">
+</div> <!-- End of Top menu -->
 
-        <h1>ZOEKFORMULIER</h1>
+<div class="container">
 
-        <fieldset>
-            <legend>Zoek hier gericht naar een bepaalde artiest of voorstelling</legend>
-            <br/>
-            <label>Vul (een deel van) de naam in van de artiest die je zoekt:<br/>
-                <input type="text" name="zoekopartiest">
-                <input type="submit" value="zoek op artiest"></label><br/>
-            <br/>
-            <label>Vul (een deel van) de naam in van de voorstelling die je zoekt:<br/>
-                <input type="text" name="zoekopvoorstelling">
-                <input type="submit" value="zoek op voorstelling"></label><br/>
-        </fieldset>
-        <br/>
-        <fieldset>
-            <legend>Zoek hier een artiest of voorstelling die bij je past</legend>
-            <label>Kies het genre waar je van houdt:</label><br/>
-            <input id="muziek" type="radio" name="genre" value="m">
-            <label for="muziek"> Muziek </label><br/>
-            <input id="theater" type="radio" name="genre" value="t">
-            <label for="theater"> Theater </label><br/>
-            <input id="dans" type="radio" name="genre" value="d">
-            <label for="dans"> Dans </label><br/>
-            <input type="submit" value="zoek op genre">
-        </fieldset>
-    </form>
+    <div class="row section">
+        <div class="col-lg-4 section-img-3"><img src="images/s-2.png">
+            <p class="section-title-3 small">zoe ken</p>
+            <p class="section-title-3 wide">zoeken</p></div>
+        <div class="col-lg-8 items" id="search-form">
+            <form action="hierwebpaginanoginvullen" method="get" id="zoekformulier">
+
+                <fieldset>
+                    <ul>
+                        <li>
+                            <h3>
+                                <legend>Zoek hier een artiest of voorstelling</legend>
+                            </h3>
+                            <br/>
+                            <label>Vul (een deel van) de naam in van de artiest die je zoekt:<br/>
+                                <input type="text" name="zoekopartiest">
+                                <input type="submit" value="zoek op artiest"></label><br/>
+                            <br/>
+                            <label>Vul (een deel van) de naam in van de voorstelling die je zoekt:<br/>
+                                <input type="text" name="zoekopvoorstelling">
+                                <input type="submit" value="zoek op voorstelling"></label><br/>
+                        </li>
+                </fieldset>
+                <br/>
+                <fieldset>
+                    <li>
+                        <h3>
+                            <legend>Zoek hier op genre
+                                <legend>
+                        </h3>
+                        <label>Kies het genre waar je van houdt:</label><br/>
+                        <input id="muziek" type="radio" name="genre" value="m">Muziek<br>
+                        <input id="theater" type="radio" name="genre" value="t">Theater<br>
+                        <input id="dans" type="radio" name="genre" value="d">Dans<br>
+                        <input type="submit" value="zoek op genre">
+                    </li>
+                    </ul>
+                </fieldset>
+            </form>
 </div>
+    </div>
+    <!--div class="row section" id="fill-page">
+        <p class="hidden">page filling div</p>
+    </div-->
+
+</div>
+
+
+<div class="footer">
+    <ul>
+        <li>hier</li>
+        <li>komen</li>
+        <li>menu</li>
+        <li>items</li>
+    </ul>
+</div>
+
 </body>
 </html>
