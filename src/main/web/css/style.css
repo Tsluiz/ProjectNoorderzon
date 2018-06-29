@@ -424,7 +424,11 @@ h3 {
     background-color: rgba(50, 50, 50, 0.2);
     border-radius: 4px;
     padding: 15px 25px;
+    margin-bottom: 20px;
+}
 
+#search-form input, #search-form select {
+    margin: 3px 0;
 }
 
 #search-form input[type="text"] {
@@ -475,8 +479,11 @@ h3 {
     position: absolute;
     width: 30%;
     right: 3em;
-    margin-top: 20px;
+    margin-top: 8px;
+    margin-bottom: 25px;
 }
+
+
 
 .form {
     text-align: right;
@@ -490,7 +497,7 @@ h3 {
 /* -- Footer --  */
 
 .footer {
-    position: static;
+    position: relative;
     bottom: 0;
     left: 0;
     min-height: 180px;
@@ -502,5 +509,5 @@ h3 {
 
 #fill-page {
     position: static;
-    height: 400px;
+    height: 250px;
 }
