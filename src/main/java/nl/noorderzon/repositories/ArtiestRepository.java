@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 public interface ArtiestRepository extends CrudRepository<Artiest, Integer> {
 
-	Artiest zoekArtiest(String naam);
+	/*Artiest zoekArtiest(String naam);
 	Artiest getVoorstellingenVanArtiest();
-
+*/
 }

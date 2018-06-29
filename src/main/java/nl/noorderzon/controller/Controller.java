@@ -21,11 +21,12 @@ public class Controller {
 		q.setParameter("naamvanartiest", "naam");
 
 		return q.getResultList();
+
 	}
 
 	@RequestMapping(path = "/json")
 	public List<Voorstelling> json() {
-		return new List<Voorstelling>();
+		return ;
 	}
 
 }
