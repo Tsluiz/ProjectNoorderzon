@@ -1,14 +1,18 @@
 package nl.noorderzon.repositories;
 
+
 import nl.noorderzon.entities.Voorstelling;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 
 @Repository
-public interface VoorstellingRepository extends CrudRepository<Voorstelling, Integer> {
+public interface VoorstellingRepository extends JpaRepository<Voorstelling, Long> {
 
-	Voorstelling toonAlleVoorstellingen();
+
+	List<Voorstelling> findAll();
 
 }
 

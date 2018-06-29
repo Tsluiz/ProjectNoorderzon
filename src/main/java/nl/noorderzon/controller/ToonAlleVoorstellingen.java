@@ -8,13 +8,15 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
+// Concept code;  combinatie van code van Controller en gevonden op internet
+
 @RestController
 public class ToonAlleVoorstellingen {
 
 	@PersistenceContext
 	private EntityManager em;
 
-	@RequestMapping(path= "/toonallevoorstellingen")
+	@RequestMapping(path = "/toonallevoorstellingen")
 	public List<Voorstelling> toonallevoorstellingen(
 			@RequestParam(value = "id") int id) {
 
@@ -23,20 +25,20 @@ public class ToonAlleVoorstellingen {
 		q.setParameter("id", "naam");
 		return q.getResultList();
 	}
-
-	@GetMapping(path="/all")
+}
+/*	@GetMapping(path="/all")
 	public @ResponseBody Iterable<Voorstelling> getAllUsers() {
 		// This returns a JSON or XML with the users
-		return VoorstellingRepository.findAll();
+		return
 	}
 }
+*/
+/*
+	@GetMapping("/add") // Map ONLY GET Requests
+	public @ResponseBody String addNewArtiest (@RequestParam String name){
+		// @ResponseBody means the returned String is the response, not a view name
+		// @RequestParam means it is a parameter from the GET or POST request
+		voorstellingen = new ArrayList<>();
 
-/*	@RequestMapping("/controller")
-	public Controller database(@RequestParam(value = "ZoekOpArtiest") int a, @RequestParam("b") int b) {
-		return new Controller(a, b);
-	}
-
-	@RequestMapping(value = "/toonAlleVoorstellingen")
-	public Controller toon(@RequestParam(value = "") String naam) {
-		return new Controller(naam);
+		return "Saved";
 	}*/
