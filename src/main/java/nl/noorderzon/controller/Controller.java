@@ -16,10 +16,16 @@ public class Controller {
 	@RequestMapping(value = "/zoekArtiest")
 	public List<Voorstelling> zoekOpArtiest(
 			@RequestParam(value = "naamvanartiest") String naam) {
-
 		TypedQuery<Voorstelling> q = em.createQuery(
 				"SELECT v FROM Voorstelling v WHERE v.id = :naamvanartiest", Voorstelling.class);
 		q.setParameter("naamvanartiest", "naam");
+
 		return q.getResultList();
 	}
+
+	@RequestMapping(path = "/json")
+	public List<Voorstelling> json() {
+		return new List<Voorstelling>();
+	}
+
 }
