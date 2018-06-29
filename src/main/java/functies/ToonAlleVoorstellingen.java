@@ -11,11 +11,6 @@ import entities.Artiest;
 import entities.Voorstelling;
 
 public class ToonAlleVoorstellingen implements AutoCloseable {
-	private EntityManagerFactory emf = Persistence.createEntityManagerFactory("controller");
-
-	public void close() {
-		emf.close();
-	}
 
 	private Scanner reader;
 
@@ -23,7 +18,7 @@ public class ToonAlleVoorstellingen implements AutoCloseable {
 	 * De verbinding om het totale programma te tonen
 	 *
 	 */
-	public Artiest showAlleVoorstellingen() {
+	public Artiest toonAlleVoorstellingen() {
 		EntityManager em = emf.createEntityManager();
 		try {
 			TypedQuery<Voorstelling> q = em.createQuery(
@@ -36,3 +31,4 @@ public class ToonAlleVoorstellingen implements AutoCloseable {
 		}
 	}
 }
+
