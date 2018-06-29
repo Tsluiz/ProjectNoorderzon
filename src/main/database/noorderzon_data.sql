@@ -23,14 +23,15 @@ DROP TABLE IF EXISTS `artiest`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `artiest` (
-  `naam` varchar(45) NOT NULL,
+  `idartiest` int(11) NOT NULL AUTO_INCREMENT,
+  `naam` varchar(45) DEFAULT NULL,
   `genre` varchar(45) DEFAULT NULL,
   `naam_voorstelling` varchar(45) DEFAULT NULL,
-  `locatie_naam` varchar(45) NOT NULL,
-  PRIMARY KEY (`naam`),
-  KEY `fk_artiest_locatie1_idx` (`locatie_naam`),
-  CONSTRAINT `fk_artiest_locatie1` FOREIGN KEY (`locatie_naam`) REFERENCES `locatie` (`naam`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `locatie_idlocatie` int(11) NOT NULL,
+  PRIMARY KEY (`idartiest`),
+  KEY `fk_artiest_locatie1_idx` (`locatie_idlocatie`),
+  CONSTRAINT `fk_artiest_locatie1` FOREIGN KEY (`locatie_idlocatie`) REFERENCES `locatie` (`idlocatie`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +40,7 @@ CREATE TABLE `artiest` (
 
 LOCK TABLES `artiest` WRITE;
 /*!40000 ALTER TABLE `artiest` DISABLE KEYS */;
-INSERT INTO `artiest` VALUES ('Dans Marike','dans','de dansende slofjes','mainstage'),('gitaar Gerrit','muziek','gitaren rammen','tent'),('Toms theater','theater','hard en zacht','container');
+INSERT INTO `artiest` VALUES (1,'Dans Marike','dans','de dansende slofjes',0),(2,'gitaar Gerrit','muziek','gitaren rammen',0),(3,'Toms theater','theater','hard en zacht',0);
 /*!40000 ALTER TABLE `artiest` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -51,9 +52,10 @@ DROP TABLE IF EXISTS `locatie`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `locatie` (
-  `naam` varchar(45) NOT NULL,
-  `capaciteit` int(11) NOT NULL,
-  PRIMARY KEY (`naam`)
+  `idlocatie` int(11) NOT NULL,
+  `naam` varchar(45) DEFAULT NULL,
+  `capaciteit` int(11) DEFAULT NULL,
+  PRIMARY KEY (`idlocatie`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -63,7 +65,7 @@ CREATE TABLE `locatie` (
 
 LOCK TABLES `locatie` WRITE;
 /*!40000 ALTER TABLE `locatie` DISABLE KEYS */;
-INSERT INTO `locatie` VALUES ('container',15),('mainstage',500),('tent',100);
+INSERT INTO `locatie` VALUES (1,'container',15),(2,'mainstage',500),(3,'tent',100);
 /*!40000 ALTER TABLE `locatie` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -75,11 +77,10 @@ DROP TABLE IF EXISTS `tijd`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tijd` (
-  `iddag` int(11) NOT NULL AUTO_INCREMENT,
-  `dag` varchar(45) NOT NULL,
-  `tijdstip` varchar(45) NOT NULL,
-  PRIMARY KEY (`iddag`),
-  UNIQUE KEY `idx_tijd_iddag` (`iddag`)
+  `idtijd` int(11) NOT NULL AUTO_INCREMENT,
+  `dag` varchar(45) DEFAULT NULL,
+  `tijdstip` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`idtijd`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -101,16 +102,16 @@ DROP TABLE IF EXISTS `voorstelling`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `voorstelling` (
-  `idvoorstelling` int(11) NOT NULL AUTO_INCREMENT,
+  `idvoorstelling` int(11) NOT NULL,
   `resterende_plaatsen` int(11) DEFAULT NULL,
-  `artiest_naam` varchar(45) NOT NULL,
-  `tijd_iddag` int(11) NOT NULL,
+  `artiest_idartiest` int(11) NOT NULL,
+  `tijd_idtijd` int(11) NOT NULL,
   PRIMARY KEY (`idvoorstelling`),
-  KEY `fk_voorstelling_artiest1_idx` (`artiest_naam`),
-  KEY `fk_voorstelling_tijd1_idx` (`tijd_iddag`),
-  CONSTRAINT `fk_voorstelling_artiest1` FOREIGN KEY (`artiest_naam`) REFERENCES `artiest` (`naam`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_voorstelling_tijd1` FOREIGN KEY (`tijd_iddag`) REFERENCES `tijd` (`iddag`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
+  KEY `fk_voorstelling_artiest_idx` (`artiest_idartiest`),
+  KEY `fk_voorstelling_tijd1_idx` (`tijd_idtijd`),
+  CONSTRAINT `fk_voorstelling_artiest` FOREIGN KEY (`artiest_idartiest`) REFERENCES `artiest` (`idartiest`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_voorstelling_tijd1` FOREIGN KEY (`tijd_idtijd`) REFERENCES `tijd` (`idtijd`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -119,7 +120,7 @@ CREATE TABLE `voorstelling` (
 
 LOCK TABLES `voorstelling` WRITE;
 /*!40000 ALTER TABLE `voorstelling` DISABLE KEYS */;
-INSERT INTO `voorstelling` VALUES (1,500,'dans Marike',1),(2,500,'dans Marike',2),(3,500,'dans Marike',3),(4,500,'dans Marike',4),(5,500,'dans Marike',5),(6,500,'dans Marike',6),(7,500,'dans Marike',7),(8,500,'dans Marike',8),(9,500,'dans Marike',9),(10,500,'dans Marike',10),(11,500,'dans Marike',11),(12,500,'dans Marike',12),(13,100,'Toms theater',1),(14,100,'Toms theater',2),(15,100,'Toms theater',3),(16,100,'Toms theater',4),(17,100,'Toms theater',5),(18,100,'Toms theater',6),(19,100,'Toms theater',7),(20,100,'Toms theater',8),(21,100,'Toms theater',9),(22,100,'Toms theater',10),(23,100,'Toms theater',11),(24,100,'Toms theater',12),(25,15,'gitaar Gerrit',1),(26,15,'gitaar Gerrit',2),(27,15,'gitaar Gerrit',3),(28,15,'gitaar Gerrit',4),(29,15,'gitaar Gerrit',5),(30,15,'gitaar Gerrit',6),(31,15,'gitaar Gerrit',7),(32,15,'gitaar Gerrit',8),(33,15,'gitaar Gerrit',9),(34,15,'gitaar Gerrit',10),(35,15,'gitaar Gerrit',11),(36,15,'gitaar Gerrit',12);
+INSERT INTO `voorstelling` VALUES (1,500,1,1),(2,500,1,2),(3,500,1,3),(4,500,1,4),(5,500,1,5),(6,500,1,6),(7,500,1,7),(8,500,1,8),(9,500,1,9),(10,500,1,10),(11,500,1,11),(12,500,1,12),(13,100,1,1),(14,100,2,2),(15,100,2,3),(16,100,2,4),(17,100,2,5),(18,100,2,6),(19,100,2,7),(20,100,2,8),(21,100,2,9),(22,100,2,10),(23,100,2,11),(24,100,2,12),(25,15,2,1),(26,15,3,2),(27,15,3,3),(28,15,3,4),(29,15,3,5),(30,15,3,6),(31,15,3,7),(32,15,3,8),(33,15,3,9),(34,15,3,10),(35,15,3,11),(36,15,3,12);
 /*!40000 ALTER TABLE `voorstelling` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -132,4 +133,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-27 20:48:36
+-- Dump completed on 2018-06-29 11:51:37
