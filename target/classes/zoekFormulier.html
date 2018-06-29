@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Noorderzon 2018 festival">
+    <meta name="keywords" content="HTML,study">
+    <meta name="author" content="Marike">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zoeken</title>
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/functions.js"></script>
+</head>
+<body>
+
+
+<div class="top-bar">
+    <img src="images/logo-small.png">
+    <div class="top-menu">
+        <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="pages/line-up.html">line-up</a></li>
+            <li><a href="pages/programma.html">programma</a></li>
+            <li><a href="#contact">contact</a></li>
+        </ul>
+    </div>
+</div>
+<div class="navigation">
+    <div class="logo"></div>
+    <div class="navigation-flow"></div>
+</div> <!-- End of Top menu -->
+
+<div class="container">
+
+    <div class="row section">
+        <div class="col-lg-4 section-img-3"><img src="images/s-2.png">
+            <p class="section-title-3 small">zoe ken</p>
+            <p class="section-title-3 wide">zoeken</p></div>
+        <div class="col-lg-8 items" id="search-form">
+            <form action="hierwebpaginanoginvullen" method="get" id="zoekformulier">
+
+                <fieldset>
+                    <ul>
+                        <li>
+                            <h3>Zoek hier een artiest of voorstelling</h3>
+                            <br/>
+                            <label>Vul (een deel van) de naam in van de artiest die je zoekt:<br/>
+                                <input type="text" name="zoekopartiest">
+                                <input type="submit" value="zoek op artiest"></label><br/>
+                            <br/>
+                            <label>Vul (een deel van) de naam in van de voorstelling die je zoekt:<br/>
+                                <input type="text" name="zoekopvoorstelling">
+                                <input type="submit" value="zoek op voorstelling"></label><br/>
+                        </li>
+                    </ul>
+                </fieldset>
+                <br/>
+                <fieldset>
+                    <ul>
+                        <li>
+                            <h3>Zoek hier op genre</h3>
+                            <label>Kies het genre waar je van houdt:</label>
+                            <input id="muziek" type="radio" name="genre" value="m" title="Muziek">Muziek<br>
+                            <input id="theater" type="radio" name="genre" value="t" title="Theater">Theater<br>
+                            <input id="dans" type="radio" name="genre" value="d" title="Dans">Dans<br>
+                            <input type="submit" value="zoek op genre">
+                        </li>
+                    </ul>
+                </fieldset>
+            </form>
+</div>
+    </div>
+    <div class="row section" id="fill-page">
+        <p class="hidden">page filling div</p>
+    </div>
+
+</div>
+
+
+<div class="footer">
+    <ul>
+        <li>hier</li>
+        <li>komen</li>
+        <li>menu</li>
+        <li>items</li>
+    </ul>
+</div>
+
+</body>
+</html>

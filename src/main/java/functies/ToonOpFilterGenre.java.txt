@@ -5,11 +5,10 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 import java.util.Scanner;
-
+/*
 import entities.Artiest;
 
-public class aZoekOpArtiest implements AutoCloseable {
-
+public class ToonOpFilterGenre implements AutoCloseable {
 	private EntityManagerFactory emf = Persistence.createEntityManagerFactory("controller");
 
 	public void close() {
@@ -18,24 +17,18 @@ public class aZoekOpArtiest implements AutoCloseable {
 
 	private Scanner reader;
 
-	/**
-	 * hier moet de artiest opgehaald worden uit het webformulier
-	 * daarna moeten de voorstellingen met die artiest worden teruggegeven aan de front-end
-	 * mv
-	 */
-	public Artiest zoekOpArtiest(){
+	public Artiest showOpGenreFilter() {
 		EntityManager em = emf.createEntityManager();
 		try {
 			TypedQuery<Artiest> q = em.createQuery(
-					"SELECT a FROM entities.Artiest a WHERE a.naam = :naamvanartiest", Artiest.class);
-			q.setParameter("naamvanartiest", "naam");
-			for(Artiest a : q.getResultList()) {
-				System.out.println(a.getNaam());
+					"SELECT g FROM entities.Artiest g WHERE g.naam = :genre", Artiest.class);
+			q.setParameter("genre", "");
+			for (Artiest g : q.getResultList()) {
+				return g.getNaam(); 
 			}
-
 		} finally {
 			em.close();
 		}
 	}
 }
-
+*/
