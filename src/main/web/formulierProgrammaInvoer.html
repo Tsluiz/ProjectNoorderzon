@@ -15,6 +15,8 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/functions.js"></script>
+    <script src="invoerFormulier.js"></script>
+
 </head>
 <body>
 
@@ -36,18 +38,19 @@
 
 <div class="container">
 
+
     <div class="row section">
         <div class="col-lg-4 section-img-3"><img src="images/s-2.png">
             <p class="section-title-3 small">in voe ren</p>
             <p class="section-title-3 wide">invoeren</p></div>
-        <div class="col-lg-8" id="search-form">
+        <div class="col-lg-8 search-form">
             <form action="" id="invoerProgramma" method="post" target="_self">
                 <fieldset>
                     <h3>Voeg voorstelling toe: </h3><br/>
                     <label class="col-lg-4 form">Artiest</label>
-                    <select class="col-lg-7" name="locatie" required>
-                        <option value="volvo">Gitaar Gerrit</option>
-                        <option value="volkswagen">Dans Marikes</option>
+                    <select class="col-lg-7 artiest" name="artiest" required>
+                        <option value="choose">Kies je artiest</option>
+
                         <!--nog locaties toevoegen of ophalen uit de database-->
                     </select>
                     <br/>
@@ -105,7 +108,7 @@
     <div class="row section">
         <div class="col-lg-4 section-img-3"><img src="images/s-1.png">
         </div>
-        <div class="col-lg-8" id="search-form">
+        <div class="col-lg-8 search-form">
             <form action="" id="invoerLocatie" method="post" target="_self">
                 <fieldset>
                     <h3>Voeg locatie toe: </h3><br/>
