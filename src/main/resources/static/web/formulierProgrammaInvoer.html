@@ -15,7 +15,7 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/functions.js"></script>
-    <script src="invoerFormulier.js"></script>
+
 
 </head>
 <body>
@@ -55,22 +55,20 @@
                     </select>
                     <br/>
                     <label class="col-lg-4 form">Genre</label>
-                    <select class="col-lg-7" name="categorie" required>
+                    <select class="col-lg-7 genres" name="categorie" required>
                         <option value="volvo">Muziek</option>
                         <!--nog genres toevoegen of ophalen uit de database-->
                     </select>
                     <br/>
                     <label class="col-lg-4 form">Titel</label>
-                    <select class="col-lg-7" name="locatie" required>
-                        <option value="volvo">Vliegende gitaren</option>
-                        <option value="volkswagen">Dans Marikes</option>
+                    <select class="col-lg-7 showtitle" name="showTitle" required>
+                        <option value="showTitle">Kies de voorstellingsnaam</option>
                         <!--nog locaties toevoegen of ophalen uit de database-->
                     </select>
                     <br/>
                     <label class="col-lg-4 form">Locatie</label>
-                    <select class="col-lg-7" name="locatie" required>
-                        <option value="volvo">Main stage</option>
-                        <option value="volkswagen">Dans Marikes</option>
+                    <select class="col-lg-7 locations" name="locatie" required>
+                        <option value="location">Kies de locatie</option>
                         <!--nog locaties toevoegen of ophalen uit de database-->
                     </select>
                     <br/>
@@ -88,8 +86,8 @@
                     <input class="col-lg-7" name="artiest" placeholder="artiest" required>
                     <br/>
                     <label class="col-lg-4 form">Genre</label>
-                    <select class="col-lg-7" name="categorie" required>
-                        <option value="volvo">Volvo</option>
+                    <select class="col-lg-7 genres" name="categorie" required>
+                        <option value="genre">Kies het genre</option>
                         <!--nog genres toevoegen of ophalen uit de database-->
                     </select>
                     <br/>
@@ -133,32 +131,42 @@
 
                     <label class="col-lg-4 form">Dag</label>
                     <select class="col-lg-7" name="locatie" required>
-                        <option value="volvo">Maandag</option>
-                        <option value="volkswagen">Dinsdag</option>
+                        <option value="monday">Maandag</option>
+                        <option value="tuesday">Dinsdag</option>
+                        <option value="wednesday">Woensdag</option>
+                        <option value="thursday">Donderdag</option>
+                        <option value="friday">Vrijdag</option>
+                        <option value="saterday">Zaterdag</option>
+                        <option value="sunday">Zondag</option>
                         <!--nog locaties toevoegen of ophalen uit de database-->
                     </select>
                     <br/>
                     <label class="col-lg-4 form">Tijd</label>
                     <select class="col-lg-2" name="locatie" required>
-                        <option value="volvo">20</option>
-                        <option value="volkswagen">Dinsdag</option>
+                        <option value="17h">17</option>
+                        <option value="18h">18</option>
+                        <option value="19h">19</option>
+                        <option value="20h">20</option>
+                        <option value="21h">21</option>
+                        <option value="22h">22</option>
+                        <option value="23h">23</option>
                         <!--nog locaties toevoegen of ophalen uit de database-->
                     </select>
                     :
                     <select class="col-lg-2" name="locatie" required>
-                        <option value="volvo">00</option>
-                        <option value="volkswagen">30</option>
+                        <option value="00m">00</option>
+                        <option value="30m">30</option>
                         <!--nog locaties toevoegen of ophalen uit de database-->
                     </select>
                     <label class="col-lg-4 form">Genre</label>
-                    <select class="col-lg-7" name="categorie" required>
-                        <option value="volvo">Volvo</option>
+                    <select class="col-lg-7 genres" name="categorie" required>
+                        <option value="genre">Kies je genre</option>
                         <!--nog genres toevoegen of ophalen uit de database-->
                     </select>
 
                     <br/>
                     <button class="col-lg-6" type="button" name="submit" onclick="alert('Hello World!')"
-                            formmethod="post"> Verstuur artiest
+                            formmethod="post"> Verstuur tijdstip
                     </button>
                     <br/>
 
@@ -182,6 +190,8 @@
         <li>items</li>
     </ul>
 </div>
+
+<script src="invoerFormulier.js"></script>
 
 </body>
 </html>
