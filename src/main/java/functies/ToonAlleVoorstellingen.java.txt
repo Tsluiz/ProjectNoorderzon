@@ -10,7 +10,7 @@ import java.util.Scanner;
 import entities.Artiest;
 import entities.Voorstelling;
 
-public class ToonAlleVoorstellingen implements AutoCloseable {
+public class ToonAlleVoorstellingen  {
 
 	private Scanner reader;
 

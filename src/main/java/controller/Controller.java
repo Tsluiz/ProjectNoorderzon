@@ -10,7 +10,6 @@ import javax.persistence.TypedQuery;
 import java.util.List;
 
 @RestController
-@CrossOrigin
 public class Controller {
 
 	@PersistenceContext

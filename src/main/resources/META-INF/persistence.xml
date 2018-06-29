@@ -11,7 +11,7 @@
         <class>entities.Tijd</class>
         <class>entities.Voorstelling</class>
         <properties>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/..." />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/8080" />
             <property name="javax.persistence.jdbc.user" value="..." />
             <property name="javax.persistence.jdbc.password" value="..." />
         </properties>
