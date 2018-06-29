@@ -24,9 +24,4 @@ public class Controller {
 
 	}
 
-	@RequestMapping(path = "/json")
-	public List<Voorstelling> json() {
-		return ;
-	}
-
 }
