@@ -20,67 +20,67 @@
 
 <div class="top-bar">
     <img src="images/logo-small.png">
-    <ul class="top-menu">
-        <li><a href="index.html">home</a></li>
-        <li><a href="pages/line-up.html">line-up</a></li>
-        <li><a href="pages/programma.html">programma</a></li>
-        <li><a href="#contact">contact</a></li>
-
-    </ul>
+    <div class="top-menu">
+        <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="pages/line-up.html">line-up</a></li>
+            <li><a href="pages/programma.html">programma</a></li>
+            <li><a href="#contact">contact</a></li>
+        </ul>
+    </div>
 </div>
 <div class="navigation">
     <div class="logo"></div>
     <div class="navigation-flow"></div>
-</div>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<div>
+</div> <!-- End of Top menu -->
+
+<div class="container">
+
+    <div class="row section">
+        <div class="col-lg-4 section-img-3"><img src="images/s-2.png">
+            <p class="section-title-3 small">in voe ren</p>
+            <p class="section-title-3 wide">invoeren</p></div>
+        <div class="col-lg-8" id="search-form">
     <form action="" id="invoerProgramma" method="post" target="_self">
         <fieldset>
-            <legend>Voer Programma onderdeel in: </legend><br/>
-            Programma titel
-            <input type="text" name="programmaTitel" placeholder="Programma titel" required>
-            <label>Voeg beschrijving toe
-                <textarea name="beschrijving"> </textarea>
+            <h3>Programma gegevens: </h3><br/>
+            <label class="col-lg-4 form">Programma titel</label>
+            <input class="col-lg-7" name="programmaTitel" placeholder="programma titel" required>
+            <label class="col-lg-4 form top">Beschrijving</label>
+            <textarea class="col-lg-7" rows="4" cols="120"> </textarea><br/>
                 <!--is het ook mooier om hier een <input>ding van te maken?-->
-            </label><br/>
-            <label>
-                Naam organisator
-                <input type="text" name="organisatorNaam" placeholder="Naam organisator" required>
-            </label>
-            <label>
-                E-mail organisator
-                <input type="email" name="email">
-                <!--is het ook mooier om hier een <input>ding van te maken?-->
-            </label>
-            <label>
-                Telefoon organisator
-                <input type="tel" name="usrtel">
-            </label><br/>
-            <label>
-                Selecteer Locatie
-                <select name="locatie" required>
+
+            <label class="col-lg-4 form">Locatie</label>
+            <select class="col-lg-7" name="locatie" required>
                     <option value="volvo">Volvo</option>
+                <option value="volkswagen">Volkswagen</option>
                     <!--nog locaties toevoegen of ophalen uit de database-->
                 </select>
-            </label><br/>
-            <label>
-                Selecteer Genre
-                <select name="categorie" required>
+            <br/>
+            <label class="col-lg-4 form">Genre</label>
+            <select class="col-lg-7" name="categorie" required>
                     <option value="volvo">Volvo</option>
                     <!--nog genres toevoegen of ophalen uit de database-->
                 </select>
-            </label><br/>
-            <label>Selecteer Tijdslot
-                <input type="checkbox" name="speeldag1" value="slotmaandag"> Maandag <br>
-            </label><br/>
-            <label>
-                Selecteer Speeltijd
-                <input type="checkbox" name="speeltijd1" value="1700"> 17:00 uur <br>
-            </label><br/>
+            <br/>
+            <label class="col-lg-4 form">Tijdslot</label>
+            <input class="col-lg-6" type="checkbox" name="speeldag1" value="slotmaandag"> Maandag <br/>
+
+            <label class="col-lg-4 form">Speeltijd</label>
+            <input class="col-lg-6" type="checkbox" name="speeltijd1" value="1700"> 17:00 uur <br/><br/>
+
+        </fieldset>
+        <br/>
+        <fieldset>
+            <h3>Organisator gegevens: </h3><br/>
+            <label class="col-lg-4 form">Naam</label>
+            <input class="col-lg-7" name="organisatorNaam" placeholder="naam organisator" required>
+            <label class="col-lg-4 form">E-mail</label>
+            <input class="col-lg-7" type="email" name="email" placeholder="john.doe@example.com">
+            <!--is het ook mooier om hier een <input>ding van te maken?-->
+
+            <label class="col-lg-4 form">Telefoon</label>
+            <input class="col-lg-7" type="tel" name="usrtel" placeholder="06-12345678"><br/>
             <!-- dringend advies van Ralf om dit niet te doen
                    <label>
                         Voeg plaatjes toe
@@ -90,7 +90,7 @@
                         Voeg muziek toe
                         <input type="file" name="pic" accept="audio/*">
                     </label><br/>-->
-            <button type="button" name="submit" onclick="alert('Hello World!')"
+            <button class="col-lg-6" type="button" name="submit" onclick="alert('Hello World!')"
                     formmethod="post"> Verstuur programma onderdeel </button>
             <!--in het zoekformulier heb ik hier gebruik gemaakt van
             <input type="submit" value="xxxx">
@@ -99,5 +99,20 @@
         </fieldset>
     </form>
 </div>
+    </div>
+    <div class="row section" id="fill-page">
+        <p class="hidden">page filling div</p>
+    </div>
+</div>
+
+<div class="footer">
+    <ul>
+        <li>hier</li>
+        <li>komen</li>
+        <li>menu</li>
+        <li>items</li>
+    </ul>
+</div>
+
 </body>
 </html>
