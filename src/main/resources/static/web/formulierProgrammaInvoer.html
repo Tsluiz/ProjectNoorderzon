@@ -20,25 +20,11 @@
 </head>
 <body>
 
-<div class="top-bar">
-    <img src="images/logo-small.png">
-    <div class="top-menu">
-        <ul>
-            <li><a href="index.html">home</a></li>
-            <li><a href="pages/line-up.html">line-up</a></li>
-            <li><a href="pages/programma.html">programma</a></li>
-            <li><a href="#contact">contact</a></li>
-        </ul>
-    </div>
-</div>
-<div class="navigation">
-    <div class="logo"><img src="images/logo.png"></div>
-    <!--div class="navigation-flow"></div-->
-</div> <!-- End of Top menu -->
+<div w3-include-html="header.html"></div>
 
 <div class="container">
 
-
+    <!-- Start of Row -->
     <div class="row section">
         <div class="col-lg-4 section-img-3"><img src="images/s-2.png">
             <p class="section-title-3 small">in voe ren</p>
@@ -101,8 +87,10 @@
                 </fieldset>
             </form>
         </div>
-    </div>
+    </div> <!-- End of Row -->
     <br/>
+
+    <!-- Start of Row -->
     <div class="row section">
         <div class="col-lg-4 section-img-3"><img src="images/s-1.png">
         </div>
@@ -121,10 +109,7 @@
                     <br/>
                 </fieldset>
             </form>
-
-
             <br/>
-
             <form action="" id="invoerTijdstip" method="post" target="_self">
                 <fieldset>
                     <h3>Voeg tijdstip toe: </h3><br/>
@@ -163,35 +148,25 @@
                         <option value="genre">Kies je genre</option>
                         <!--nog genres toevoegen of ophalen uit de database-->
                     </select>
-
                     <br/>
                     <button class="col-lg-6" type="button" name="submit" onclick="alert('Hello World!')"
                             formmethod="post"> Verstuur tijdstip
                     </button>
                     <br/>
-
                 </fieldset>
             </form>
         </div>
-    </div>
+    </div> <!-- End of Row -->
     <br/>
-
-
     <div class="row section" id="fill-page">
         <p class="hidden">page filling div</p>
     </div>
-</div>
+</div> <!-- End of Container -->
 
-<div class="footer">
-    <ul>
-        <li>hier</li>
-        <li>komen</li>
-        <li>menu</li>
-        <li>items</li>
-    </ul>
-</div>
+<div w3-include-html="footer.html"></div>
 
 <script src="js/invoerFormulier.js"></script>
+<script src="js/includeHTML.js"></script>
 
 </body>
 </html>

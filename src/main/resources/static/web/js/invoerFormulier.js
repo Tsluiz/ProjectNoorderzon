@@ -2,7 +2,7 @@ $(window).on("load", loadArtists(), loadGenres(), loadShowTitle(), loadLocations
 
 
 function loadArtists() {
-    /*   jQuery.get('/artiest', function(data) {
+    /*   jQuery.get('/artiesten', function(data) {
            var artiesten = data._embedded.artiesten;
            /*
            var $div = $('#message');
