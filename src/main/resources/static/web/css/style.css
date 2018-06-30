@@ -533,3 +533,26 @@ h3 {
     position: static;
     height: 250px;
 }
+
+.section-table {
+    background: url("../images/s-1.png") left center no-repeat;
+    padding-top: 50px;
+    vertical-align: top;
+}
+
+.section-table div {
+    padding: 0;
+}
+
+.col-lg-2 th, tr, table, td {
+    border-bottom: 2px solid black;
+    width: 100%;
+    text-indent: 10px;
+}
+
+.col-lg-2 td, .col-lg-3 td {
+    border-bottom: 2px solid gray;
+    text-indent: 0;
+    padding: 10px;
+    font-size: 16px;
+}
