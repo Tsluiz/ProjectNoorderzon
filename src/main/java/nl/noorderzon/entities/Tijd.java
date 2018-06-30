@@ -18,7 +18,7 @@ public class Tijd {
     @Column(name = "tijdstip")
     private String tijdstip;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "tijdstip")
     private List<Voorstelling> voorstellingPerTijdslot;
 
 

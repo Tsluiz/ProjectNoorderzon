@@ -8,7 +8,7 @@ import java.util.List;
 public class Locatie {
 
     @Column (name = "idlocatie")
-    @id
+    @Id
     private int idlocatie;
 
     @Column(name = "naam", nullable = false)
@@ -17,7 +17,7 @@ public class Locatie {
     @Column(name = "capaciteit")
     private int maxCapaciteit;
 
-    @OneToMany (mappedBy = "naam")
+    @OneToMany(mappedBy = "vasteLocatie")
     private List<Artiest> artiestenVanDezeLocatie;
 
     public int getIdlocatie() {return idlocatie;}

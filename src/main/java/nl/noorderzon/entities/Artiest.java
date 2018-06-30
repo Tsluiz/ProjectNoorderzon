@@ -8,8 +8,8 @@ import java.util.List;
 @Table (name = "artiest")
 public class Artiest {
 
-    @column (name = "idartiest")
-    @id
+    @Column(name = "idartiest")
+    @Id
     private int idartiest;
 
     @Column (name = "naam")
@@ -22,10 +22,10 @@ public class Artiest {
     private String naamVoorstelling;
 
     @ManyToOne
-    @JoinColumn (name = "locatie_naam")
+    @JoinColumn(name = "locatie_idlocatie")
     private Locatie vasteLocatie;
 
-    @OneToMany (mappedBy = "id")
+    @OneToMany(mappedBy = "artiest")
     private List<Voorstelling> voorstellingenVanArtiest;
 
 
