@@ -20,8 +20,8 @@ function loadArtists() {
     $select.empty();
     /* for (var i = 0; i < artiesten.length; i++) {
          var $option = $('<option>');
-         $option.val(artiesten[i]._links.self.href);
-         $option.text(artiesten[i].title);
+         $option.val(artiesten[i].id);
+         $option.text(artiesten[i].naam);
          $select.append($option);
      }
  }
