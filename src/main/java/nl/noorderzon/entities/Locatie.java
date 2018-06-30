@@ -7,8 +7,11 @@ import java.util.List;
 @Table(name = "locatie")
 public class Locatie {
 
+    @Column (name = "idlocatie")
+    @id
+    private int idlocatie;
+
     @Column(name = "naam", nullable = false)
-    @Id
     private String naam;
 
     @Column(name = "capaciteit")
@@ -17,6 +20,9 @@ public class Locatie {
     @OneToMany (mappedBy = "naam")
     private List<Artiest> artiestenVanDezeLocatie;
 
+    public int getIdlocatie() {return idlocatie;}
+
+    public void setIdlocatie(int idlocatie) {this.idlocatie = idlocatie;}
 
     public String getNaam() {
         return naam;

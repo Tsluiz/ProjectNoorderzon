@@ -8,8 +8,11 @@ import java.util.List;
 @Table (name = "artiest")
 public class Artiest {
 
+    @column (name = "idartiest")
+    @id
+    private int idartiest;
+
     @Column (name = "naam")
-    @Id
     private String naam;
 
     @Column (name = "genre")
@@ -25,6 +28,10 @@ public class Artiest {
     @OneToMany (mappedBy = "id")
     private List<Voorstelling> voorstellingenVanArtiest;
 
+
+    public int getIdartiest() { return idartiest; }
+
+    public void setIdartiest(int idartiest) {this.idartiest = idartiest;}
 
     public String getNaam() {
         return naam;
