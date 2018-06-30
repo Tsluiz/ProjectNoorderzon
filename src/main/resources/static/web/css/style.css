@@ -217,7 +217,7 @@ h3 {
 
 /* -- Navigation bar --  */
 .navigation {
-    background: url("../images/noorderzon-sfeer.jpg") no-repeat center center;
+    background: url("../images/noorderzon-sfeer.jpg") no-repeat center bottom;
     background-size: cover;
     height: 200px;
     position: relative;
