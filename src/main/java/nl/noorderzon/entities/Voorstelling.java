@@ -10,7 +10,7 @@ public class Voorstelling {
     @Id
     private int id;
 
-    @Column (name = "capaciteit")
+    @Column(name = "resterende_plaatsen")
     private int capaciteit;
 //in de database is het type een varchar/string,
 //maar kunnen we er dan nog wel mee rekenen?

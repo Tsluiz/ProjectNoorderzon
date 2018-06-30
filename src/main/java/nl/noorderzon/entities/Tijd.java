@@ -8,7 +8,7 @@ import java.util.List;
 @Table(name = "tijd")
 public class Tijd {
 
-    @Column(name = "iddag")
+    @Column(name = "idtijd")
     @Id
     private int id;
 
