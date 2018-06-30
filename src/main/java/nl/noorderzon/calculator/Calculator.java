@@ -1,5 +1,10 @@
 package nl.noorderzon.calculator;
 
+import nl.noorderzon.entities.Voorstelling;
+
+import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
+
 public class Calculator {
 
     // the static value of the original capacity of the location
@@ -18,10 +23,9 @@ public class Calculator {
      */
 
     public Calculator(int quant_res) {
-    cap_loc = 397; //deze is voor het testen van de methode. Moet vervangen worden door input DB
-          resQuantity = quant_res; //dit moet user-input worden
-     cap_loc = cap_loc - resQuantity;
-
+        cap_loc = 397; //deze is voor het testen van de methode. Moet vervangen worden door input DB
+        resQuantity = quant_res; //dit moet user-input worden
+        cap_loc = cap_loc - resQuantity;
     }
 
 
@@ -31,11 +35,25 @@ public class Calculator {
 
 
     public int getAvailable() {
-        if (available >0) {
+        if (available > 0) {
             return "" + available;
         } else {
             return "No seats left";
-}
+        }
+
+
+    }
+
+    private Voorstelling getVoorstelling() {
+        EntityManager em = emf.createEntityManager();
+        try {
+            TypedQuery<Voorstelling> query = em.createQuery("SELECT v FROM Voorstelling v WHERE v.id = :voorstellingId", Voorstelling.class);
+            query.setParameter("voorstellingId", 1);
+            return query.getSingleResult();
+        } finally {
+            em.close();
+        }
+    }
 
 }
 
