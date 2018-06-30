@@ -8,7 +8,7 @@ import java.util.List;
 @Table(name = "tijd")
 public class Tijd {
 
-    @Column(name = "iddag")
+    @Column(name = "idtijd")
     @Id
     private int id;
 
@@ -18,7 +18,7 @@ public class Tijd {
     @Column(name = "tijdstip")
     private String tijdstip;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "tijdstip")
     private List<Voorstelling> voorstellingPerTijdslot;
 
 

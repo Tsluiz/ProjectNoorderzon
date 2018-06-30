@@ -3,6 +3,8 @@ package nl.noorderzon.calculator;
 import nl.noorderzon.entities.Voorstelling;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
 public class Calculator {
@@ -16,6 +18,9 @@ public class Calculator {
     // number of seats originally available (deze wordt verwijderd duidelijk is hoe we de data uit de DB kunnen halen.
     private int cap_loc;
 
+    private static EntityManagerFactory emf =
+            Persistence.createEntityManagerFactory("nl.noorderzon.hibernate");
+
     /**
      * Create a class which calculates the available seats.
      * Input is generated form the SQL DB. This connection is WIP
@@ -28,15 +33,9 @@ public class Calculator {
         cap_loc = cap_loc - resQuantity;
     }
 
-
-    public void setAvailable(int available) {
-        this.available = available;
-    }
-
-
-    public int getAvailable() {
-        if (available > 0) {
-            return "" + available;
+    public String getAvailable() {
+        if (cap_loc > 0) {
+            return "" + cap_loc;
         } else {
             return "No seats left";
         }
