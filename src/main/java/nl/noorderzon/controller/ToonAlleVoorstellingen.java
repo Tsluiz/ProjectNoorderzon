@@ -22,7 +22,7 @@ public class ToonAlleVoorstellingen {
 
 		TypedQuery<Voorstelling> q = em.createQuery(
 				"SELECT v FROM Voorstelling v WHERE v.id = :id", Voorstelling.class);
-		q.setParameter("id", "naam");
+		q.setParameter("id", id);
 		return q.getResultList();
 	}
 }
