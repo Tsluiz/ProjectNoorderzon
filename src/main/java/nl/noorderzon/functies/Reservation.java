@@ -18,6 +18,7 @@ public class Reservation {
     // number of seats originally available (deze wordt verwijderd duidelijk is hoe we de data uit de DB kunnen halen.
     private int capacity;
     private boolean validReservation;
+    private int voorstelling = 1;
 
     private static EntityManagerFactory emf =
             Persistence.createEntityManagerFactory("nl.noorderzon.hibernate");
@@ -31,6 +32,7 @@ public class Reservation {
         Calculate(quant_res);
         System.out.println("ValidReservation = " + validReservation);
         System.out.println("Capacity = " + capacity);
+        updateCapaciteit();
     }
 
     // Main aangemaakt om te testen
@@ -52,12 +54,25 @@ public class Reservation {
         EntityManager em = emf.createEntityManager();
         try {
             TypedQuery<Voorstelling> query = em.createQuery("SELECT v FROM Voorstelling v WHERE v.id = :voorstellingId", Voorstelling.class);
-            query.setParameter("voorstellingId", 1);
+            query.setParameter("voorstellingId", voorstelling);
             return query.getSingleResult();
         } finally {
             em.close();
         }
     }
+
+    private void updateCapaciteit() {
+        EntityManager em = emf.createEntityManager();
+        Voorstelling v = em.find(Voorstelling.class, voorstelling);
+        try {
+            em.getTransaction().begin();
+            v.setCapaciteit(capacity);
+            em.getTransaction().commit();
+        } finally {
+            em.close();
+        }
+    }
+
 
     /**
      * public String getAvailable() {
