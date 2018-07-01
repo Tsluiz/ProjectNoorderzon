@@ -7,20 +7,17 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Set;
 
 
 @Repository
 public interface VoorstellingRepository extends PagingAndSortingRepository<Voorstelling, Integer> {
-    Set<Employee> findByLastName(@Param("name") String name);
+    Set<Voorstelling> findVoorstellingByArtiest_Naam(@Param("artiestNaam") String artiestNaam);
 
-	List<Voorstelling> findAll();
+    Set<Voorstelling> findVoorstellingByArtiest_NaamVoorstelling(@Param("naam") String name);
 
-}
+    Set<Voorstelling> findVoorstellingByArtiest_Genre(@Param("genre") String genre);
 
-public interface EmployeeRepository extends PagingAndSortingRepository<Employee, Integer> {
-    Set<Employee> findByLastName(@Param("name") String name);
+    Set<Voorstelling> findAll();
 
-    Employee findFirstByEmail(@Param("email") String email);
-
-    List<Employee> findByJobTitleOrderByHireDate(@Param("job") String job);
 }
