@@ -15,104 +15,158 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/functions.js"></script>
+
+
 </head>
 <body>
 
-<div class="top-bar">
-    <img src="images/logo-small.png">
-    <div class="top-menu">
-        <ul>
-            <li><a href="index.html">home</a></li>
-            <li><a href="pages/line-up.html">line-up</a></li>
-            <li><a href="pages/programma.html">programma</a></li>
-            <li><a href="#contact">contact</a></li>
-        </ul>
-    </div>
-</div>
-<div class="navigation">
-    <div class="logo"></div>
-    <div class="navigation-flow"></div>
-</div> <!-- End of Top menu -->
+<div w3-include-html="header.html"></div>
 
 <div class="container">
 
+    <!-- Start of Row -->
     <div class="row section">
         <div class="col-lg-4 section-img-3"><img src="images/s-2.png">
             <p class="section-title-3 small">in voe ren</p>
             <p class="section-title-3 wide">invoeren</p></div>
-        <div class="col-lg-8" id="search-form">
-    <form action="" id="invoerProgramma" method="post" target="_self">
-        <fieldset>
-            <h3>Programma gegevens: </h3><br/>
-            <label class="col-lg-4 form">Programma titel</label>
-            <input class="col-lg-7" name="programmaTitel" placeholder="programma titel" required>
-            <label class="col-lg-4 form top">Beschrijving</label>
-            <textarea class="col-lg-7" rows="4" cols="120"> </textarea><br/>
-                <!--is het ook mooier om hier een <input>ding van te maken?-->
+        <div class="col-lg-8 search-form">
+            <form action="" id="invoerProgramma" method="post" target="_self">
+                <fieldset>
+                    <h3>Voeg voorstelling toe: </h3><br/>
+                    <label class="col-lg-4 form">Artiest</label>
+                    <select class="col-lg-7 artiest" name="artiest" required>
+                        <option value="choose">Kies je artiest</option>
 
-            <label class="col-lg-4 form">Locatie</label>
-            <select class="col-lg-7" name="locatie" required>
-                    <option value="volvo">Volvo</option>
-                <option value="volkswagen">Volkswagen</option>
-                    <!--nog locaties toevoegen of ophalen uit de database-->
-                </select>
+                        <!--nog locaties toevoegen of ophalen uit de database-->
+                    </select>
+                    <br/>
+                    <label class="col-lg-4 form">Genre</label>
+                    <select class="col-lg-7 genres" name="categorie" required>
+                        <option value="volvo">Muziek</option>
+                        <!--nog genres toevoegen of ophalen uit de database-->
+                    </select>
+                    <br/>
+                    <label class="col-lg-4 form">Titel</label>
+                    <select class="col-lg-7 showtitle" name="showTitle" required>
+                        <option value="showTitle">Kies de voorstellingsnaam</option>
+                        <!--nog locaties toevoegen of ophalen uit de database-->
+                    </select>
+                    <br/>
+                    <label class="col-lg-4 form">Locatie</label>
+                    <select class="col-lg-7 locations" name="locatie" required>
+                        <option value="location">Kies de locatie</option>
+                        <!--nog locaties toevoegen of ophalen uit de database-->
+                    </select>
+                    <br/>
+                    <button class="col-lg-6" type="button" name="submit" onclick="alert('Hello World!')"
+                            formmethod="post"> Verstuur voorstelling
+                    </button>
+                    <br/>
+                </fieldset>
+                <br/>
+            </form>
+            <form action="" id="invoerArtiest" method="post" target="_self">
+                <fieldset>
+                    <h3>Voeg artiest toe: </h3><br/>
+                    <label class="col-lg-4 form">Naam</label>
+                    <input class="col-lg-7" name="artiest" placeholder="artiest" required>
+                    <br/>
+                    <label class="col-lg-4 form">Genre</label>
+                    <select class="col-lg-7 genres" name="categorie" required>
+                        <option value="genre">Kies het genre</option>
+                        <!--nog genres toevoegen of ophalen uit de database-->
+                    </select>
+                    <br/>
+                    <label class="col-lg-4 form">Titel</label>
+                    <input class="col-lg-7" name="artiest" placeholder="titel" required><br/>
+
+                    <button class="col-lg-6" type="button" name="submit" onclick="alert('Hello World!')"
+                            formmethod="post"> Verstuur artiest
+                    </button>
+                    <br/>
+                </fieldset>
+            </form>
+        </div>
+    </div> <!-- End of Row -->
+    <br/>
+
+    <!-- Start of Row -->
+    <div class="row section">
+        <div class="col-lg-4 section-img-3"><img src="images/s-1.png">
+        </div>
+        <div class="col-lg-8 search-form">
+            <form action="" id="invoerLocatie" method="post" target="_self">
+                <fieldset>
+                    <h3>Voeg locatie toe: </h3><br/>
+                    <label class="col-lg-4 form">Locatie</label>
+                    <input class="col-lg-7" name="artiest" placeholder="artiest" required>
+                    <label class="col-lg-4 form">Aantal plaatsen</label>
+                    <input class="col-lg-7" name="artiest" placeholder="bijv. 45" required>
+                    <br/>
+                    <button class="col-lg-6" type="button" name="submit" onclick="alert('Hello World!')"
+                            formmethod="post"> Verstuur locatie
+                    </button>
+                    <br/>
+                </fieldset>
+            </form>
             <br/>
-            <label class="col-lg-4 form">Genre</label>
-            <select class="col-lg-7" name="categorie" required>
-                    <option value="volvo">Volvo</option>
-                    <!--nog genres toevoegen of ophalen uit de database-->
-                </select>
-            <br/>
-            <label class="col-lg-4 form">Tijdslot</label>
-            <input class="col-lg-6" type="checkbox" name="speeldag1" value="slotmaandag"> Maandag <br/>
+            <form action="" id="invoerTijdstip" method="post" target="_self">
+                <fieldset>
+                    <h3>Voeg tijdstip toe: </h3><br/>
 
-            <label class="col-lg-4 form">Speeltijd</label>
-            <input class="col-lg-6" type="checkbox" name="speeltijd1" value="1700"> 17:00 uur <br/><br/>
-
-        </fieldset>
-        <br/>
-        <fieldset>
-            <h3>Organisator gegevens: </h3><br/>
-            <label class="col-lg-4 form">Naam</label>
-            <input class="col-lg-7" name="organisatorNaam" placeholder="naam organisator" required>
-            <label class="col-lg-4 form">E-mail</label>
-            <input class="col-lg-7" type="email" name="email" placeholder="john.doe@example.com">
-            <!--is het ook mooier om hier een <input>ding van te maken?-->
-
-            <label class="col-lg-4 form">Telefoon</label>
-            <input class="col-lg-7" type="tel" name="usrtel" placeholder="06-12345678"><br/>
-            <!-- dringend advies van Ralf om dit niet te doen
-                   <label>
-                        Voeg plaatjes toe
-                        <input type="file" name="pic" accept="image/*">
-                    </label><br/>
-                    <label>
-                        Voeg muziek toe
-                        <input type="file" name="pic" accept="audio/*">
-                    </label><br/>-->
-            <button class="col-lg-6" type="button" name="submit" onclick="alert('Hello World!')"
-                    formmethod="post"> Verstuur programma onderdeel </button>
-            <!--in het zoekformulier heb ik hier gebruik gemaakt van
-            <input type="submit" value="xxxx">
-            dus niet met button...
-            -->
-        </fieldset>
-    </form>
-</div>
-    </div>
+                    <label class="col-lg-4 form">Dag</label>
+                    <select class="col-lg-7" name="locatie" required>
+                        <option value="monday">Maandag</option>
+                        <option value="tuesday">Dinsdag</option>
+                        <option value="wednesday">Woensdag</option>
+                        <option value="thursday">Donderdag</option>
+                        <option value="friday">Vrijdag</option>
+                        <option value="saterday">Zaterdag</option>
+                        <option value="sunday">Zondag</option>
+                        <!--nog locaties toevoegen of ophalen uit de database-->
+                    </select>
+                    <br/>
+                    <label class="col-lg-4 form">Tijd</label>
+                    <select class="col-lg-2" name="locatie" required>
+                        <option value="17h">17</option>
+                        <option value="18h">18</option>
+                        <option value="19h">19</option>
+                        <option value="20h">20</option>
+                        <option value="21h">21</option>
+                        <option value="22h">22</option>
+                        <option value="23h">23</option>
+                        <!--nog locaties toevoegen of ophalen uit de database-->
+                    </select>
+                    :
+                    <select class="col-lg-2" name="locatie" required>
+                        <option value="00m">00</option>
+                        <option value="30m">30</option>
+                        <!--nog locaties toevoegen of ophalen uit de database-->
+                    </select>
+                    <label class="col-lg-4 form">Genre</label>
+                    <select class="col-lg-7 genres" name="categorie" required>
+                        <option value="genre">Kies je genre</option>
+                        <!--nog genres toevoegen of ophalen uit de database-->
+                    </select>
+                    <br/>
+                    <button class="col-lg-6" type="button" name="submit" onclick="alert('Hello World!')"
+                            formmethod="post"> Verstuur tijdstip
+                    </button>
+                    <br/>
+                </fieldset>
+            </form>
+        </div>
+    </div> <!-- End of Row -->
+    <br/>
     <div class="row section" id="fill-page">
         <p class="hidden">page filling div</p>
     </div>
-</div>
+</div> <!-- End of Container -->
 
-<div class="footer">
-    <ul>
-        <li>hier</li>
-        <li>komen</li>
-        <li>menu</li>
-        <li>items</li>
-    </ul>
-</div>
+<div w3-include-html="footer.html"></div>
+
+<script src="js/invoerFormulier.js"></script>
+<script src="js/includeHTML.js"></script>
 
 </body>
 </html>

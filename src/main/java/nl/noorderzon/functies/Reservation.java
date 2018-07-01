@@ -1,15 +1,13 @@
-package nl.noorderzon.calculator;
+package nl.noorderzon.functies;
 
-import nl.noorderzon.Application;
 import nl.noorderzon.entities.Voorstelling;
-import org.springframework.boot.SpringApplication;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
-public class Calculator {
+public class Reservation {
 
     // the static value of the original capacity of the location
     //private int capacity; --> Via entity klassen data resterende plaatsen ophalen.
@@ -29,7 +27,7 @@ public class Calculator {
      * Input is generated form the SQL DB. This connection is WIP
      * "cap_loc" is the original capacity of a location
      */
-    public Calculator(int quant_res) {
+    public Reservation(int quant_res) {
         Calculate(quant_res);
         System.out.println("ValidReservation = " + validReservation);
         System.out.println("Capacity = " + capacity);
@@ -37,7 +35,7 @@ public class Calculator {
 
     // Main aangemaakt om te testen
     public static void main(String[] args) {
-        Calculator c = new Calculator(4);
+        Reservation c = new Reservation(4);
     }
 
     public void Calculate(int quant_res) {
