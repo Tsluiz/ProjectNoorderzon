@@ -1,15 +1,13 @@
-package nl.noorderzon.calculator;
+package nl.noorderzon.functies;
 
-import nl.noorderzon.Application;
 import nl.noorderzon.entities.Voorstelling;
-import org.springframework.boot.SpringApplication;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
-public class Calculator {
+public class Reservation {
 
     // the static value of the original capacity of the location
     //private int capacity; --> Via entity klassen data resterende plaatsen ophalen.
@@ -20,6 +18,7 @@ public class Calculator {
     // number of seats originally available (deze wordt verwijderd duidelijk is hoe we de data uit de DB kunnen halen.
     private int capacity;
     private boolean validReservation;
+    private int voorstelling = 1;
 
     private static EntityManagerFactory emf =
             Persistence.createEntityManagerFactory("nl.noorderzon.hibernate");
@@ -29,15 +28,16 @@ public class Calculator {
      * Input is generated form the SQL DB. This connection is WIP
      * "cap_loc" is the original capacity of a location
      */
-    public Calculator(int quant_res) {
+    public Reservation(int quant_res) {
         Calculate(quant_res);
         System.out.println("ValidReservation = " + validReservation);
         System.out.println("Capacity = " + capacity);
+        updateCapaciteit();
     }
 
     // Main aangemaakt om te testen
     public static void main(String[] args) {
-        Calculator c = new Calculator(4);
+        Reservation c = new Reservation(4);
     }
 
     public void Calculate(int quant_res) {
@@ -54,12 +54,25 @@ public class Calculator {
         EntityManager em = emf.createEntityManager();
         try {
             TypedQuery<Voorstelling> query = em.createQuery("SELECT v FROM Voorstelling v WHERE v.id = :voorstellingId", Voorstelling.class);
-            query.setParameter("voorstellingId", 1);
+            query.setParameter("voorstellingId", voorstelling);
             return query.getSingleResult();
         } finally {
             em.close();
         }
     }
+
+    private void updateCapaciteit() {
+        EntityManager em = emf.createEntityManager();
+        Voorstelling v = em.find(Voorstelling.class, voorstelling);
+        try {
+            em.getTransaction().begin();
+            v.setCapaciteit(capacity);
+            em.getTransaction().commit();
+        } finally {
+            em.close();
+        }
+    }
+
 
     /**
      * public String getAvailable() {
