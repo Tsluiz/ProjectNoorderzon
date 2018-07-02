@@ -25,8 +25,8 @@ public class Artiest {
     @JoinColumn(name = "locatie_idlocatie")
     private Locatie vasteLocatie;
 
-    @OneToMany(mappedBy = "artiest")
-    private List<Voorstelling> voorstellingenVanArtiest;
+    //   @OneToMany(mappedBy = "artiest")
+    //   private Set<Voorstelling> voorstellingenVanArtiest;
 
 
     public int getIdartiest() { return idartiest; }
@@ -57,9 +57,9 @@ public class Artiest {
         this.naamVoorstelling = naamVoorstelling;
     }
 
-    public List<Voorstelling> getVoorstellingenVanArtiest() {
-        return voorstellingenVanArtiest;
-    }
+//    public Set<Voorstelling> getVoorstellingenVanArtiest() {
+    //       return voorstellingenVanArtiest;
+    //   }
 
     public Locatie getLocatie() {
         return vasteLocatie;
@@ -69,10 +69,8 @@ public class Artiest {
         this.vasteLocatie = locatie;
     }
 
-    public void setVoorstellingenVanArtiest(List<Voorstelling> voorstellingenVanArtiest) {
-        this.voorstellingenVanArtiest = voorstellingenVanArtiest;
-
-
-    }
+//    public void setVoorstellingenVanArtiest(Set<Voorstelling> voorstellingenVanArtiest) {
+//        this.voorstellingenVanArtiest = voorstellingenVanArtiest;
+//    }
 }
 
