@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
+import java.util.Set;
 
 
 // CODE VAN TOM: Alternief poging, gevonden op internet. Gebruikt /path ipv /value
@@ -20,7 +21,7 @@ public class MartineVoorstellingen{
 	private List<Voorstelling> voorstellingen;
 
 	@GetMapping //("/allevoorstellingen") // Map ONLY GET Requests
-	public List<Voorstelling> toonAlleVoorstellingen(){
+    public Set<Voorstelling> toonAlleVoorstellingen() {
 		return voorstellingRepository.findAll();
 	}
 }

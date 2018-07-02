@@ -1,19 +1,23 @@
 package nl.noorderzon.repositories;
 
-
 import nl.noorderzon.entities.Voorstelling;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Set;
 
 
 @Repository
-public interface VoorstellingRepository extends JpaRepository<Voorstelling, Long> {
+public interface VoorstellingRepository extends PagingAndSortingRepository<Voorstelling, Integer> {
+    Set<Voorstelling> findVoorstellingByArtiest_Naam(@Param("artiestNaam") String artiestNaam);
 
+    Set<Voorstelling> findVoorstellingByArtiest_NaamVoorstelling(@Param("naam") String name);
 
-	List<Voorstelling> findAll();
+    Set<Voorstelling> findVoorstellingByArtiest_Genre(@Param("genre") String genre);
+
+    Set<Voorstelling> findAll();
 
 }
-
-
