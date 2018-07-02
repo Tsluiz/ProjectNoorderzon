@@ -1,7 +1,10 @@
 package nl.noorderzon.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "locatie")
@@ -18,7 +21,8 @@ public class Locatie {
     private int maxCapaciteit;
 
     @OneToMany(mappedBy = "vasteLocatie")
-    private List<Artiest> artiestenVanDezeLocatie;
+    @JsonIgnore
+    private Set<Artiest> artiestenVanDezeLocatie;
 
     public int getIdlocatie() {return idlocatie;}
 
@@ -40,11 +44,11 @@ public class Locatie {
         this.maxCapaciteit = maxCapaciteit;
     }
 
-    public List<Artiest> getArtiestenVanDezeLocatie() {
+    public Set<Artiest> getArtiestenVanDezeLocatie() {
         return artiestenVanDezeLocatie;
     }
 
-    public void setArtiestenVanDezeLocatie(List<Artiest> artiestenVanDezeLocatie) {
+    public void setArtiestenVanDezeLocatie(Set<Artiest> artiestenVanDezeLocatie) {
         this.artiestenVanDezeLocatie = artiestenVanDezeLocatie;
     }
 }

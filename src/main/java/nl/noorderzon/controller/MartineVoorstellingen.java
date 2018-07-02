@@ -14,7 +14,7 @@ import java.util.Set;
 @RestController    // This means that this class is a Controller
 @RequestMapping("/voorstellingen") // This means URL's start with /demo (after Application path)
 public class MartineVoorstellingen{
-
+/*
 	@Autowired
 	VoorstellingRepository voorstellingRepository;
 
@@ -23,7 +23,7 @@ public class MartineVoorstellingen{
 	@GetMapping //("/allevoorstellingen") // Map ONLY GET Requests
     public Set<Voorstelling> toonAlleVoorstellingen() {
 		return voorstellingRepository.findAll();
-	}
+	}*/
 }
 
 /*@GetMapping("/voorstellingen") // Map ONLY GET Requests
