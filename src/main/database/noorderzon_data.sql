@@ -40,7 +40,7 @@ CREATE TABLE `artiest` (
 
 LOCK TABLES `artiest` WRITE;
 /*!40000 ALTER TABLE `artiest` DISABLE KEYS */;
-INSERT INTO `artiest` VALUES (1,'Dans Marike','dans','de dansende slofjes',0),(2,'gitaar Gerrit','muziek','gitaren rammen',0),(3,'Toms theater','theater','hard en zacht',0);
+INSERT INTO `artiest` VALUES (1,'Dans Marike','dans','de dansende slofjes',1),(2,'gitaar Gerrit','muziek','gitaren rammen',2),(3,'Toms theater','theater','hard en zacht',3);
 /*!40000 ALTER TABLE `artiest` ENABLE KEYS */;
 UNLOCK TABLES;
 
