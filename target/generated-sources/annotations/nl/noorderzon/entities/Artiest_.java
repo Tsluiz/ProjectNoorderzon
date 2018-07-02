@@ -1,7 +1,7 @@
 package nl.noorderzon.entities;
 
 import javax.annotation.Generated;
-import javax.persistence.metamodel.ListAttribute;
+import javax.persistence.metamodel.SetAttribute;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
@@ -10,7 +10,7 @@ import javax.persistence.metamodel.StaticMetamodel;
 public abstract class Artiest_ {
 
 	public static volatile SingularAttribute<Artiest, Locatie> vasteLocatie;
-	public static volatile ListAttribute<Artiest, Voorstelling> voorstellingenVanArtiest;
+	public static volatile SetAttribute<Artiest, Voorstelling> voorstellingenVanArtiest;
 	public static volatile SingularAttribute<Artiest, String> genre;
 	public static volatile SingularAttribute<Artiest, Integer> idartiest;
 	public static volatile SingularAttribute<Artiest, String> naam;

@@ -1,8 +1,11 @@
 package nl.noorderzon.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table (name = "artiest")
@@ -25,8 +28,9 @@ public class Artiest {
     @JoinColumn(name = "locatie_idlocatie")
     private Locatie vasteLocatie;
 
-    //   @OneToMany(mappedBy = "artiest")
-    //   private Set<Voorstelling> voorstellingenVanArtiest;
+    @OneToMany(mappedBy = "artiest")
+    @JsonIgnore
+    private Set<Voorstelling> voorstellingenVanArtiest;
 
 
     public int getIdartiest() { return idartiest; }

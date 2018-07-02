@@ -1,8 +1,11 @@
 package nl.noorderzon.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "tijd")
@@ -19,7 +22,8 @@ public class Tijd {
     private String tijdstip;
 
     @OneToMany(mappedBy = "tijdstip")
-    private List<Voorstelling> voorstellingPerTijdslot;
+    @JsonIgnore
+    private Set<Voorstelling> voorstellingPerTijdslot;
 
 
     public int getId() {
@@ -46,11 +50,11 @@ public class Tijd {
         this.tijdstip = tijdstip;
     }
 
-    public List<Voorstelling> getVoorstellingPerTijdslot() {
+    public Set<Voorstelling> getVoorstellingPerTijdslot() {
         return voorstellingPerTijdslot;
     }
 
-    public void setVoorstellingPerTijdslot(List<Voorstelling> voorstellingPerTijdslot) {
+    public void setVoorstellingPerTijdslot(Set<Voorstelling> voorstellingPerTijdslot) {
         this.voorstellingPerTijdslot = voorstellingPerTijdslot;
     }
 }

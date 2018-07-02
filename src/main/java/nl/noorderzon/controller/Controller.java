@@ -17,11 +17,10 @@ public class Controller {
 	public List<Voorstelling> zoekOpArtiest(
 			@RequestParam(value = "naamvanartiest") String naam) {
 		TypedQuery<Voorstelling> q = em.createQuery(
-				"SELECT v FROM Voorstelling v WHERE v.id = :naamvanartiest", Voorstelling.class);
-		q.setParameter("naamvanartiest", "naam");
+                "SELECT v FROM Voorstelling v WHERE v.artiest.naam LIKE :naamvanartiest", Voorstelling.class);
+        q.setParameter("naamvanartiest", naam);
 
 		return q.getResultList();
-
 	}
 
 }

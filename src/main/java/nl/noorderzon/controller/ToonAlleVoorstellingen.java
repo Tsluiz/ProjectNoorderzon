@@ -17,12 +17,10 @@ public class ToonAlleVoorstellingen {
 	private EntityManager em;
 
 	@RequestMapping(path = "/toonallevoorstellingen")
-	public List<Voorstelling> toonallevoorstellingen(
-			@RequestParam(value = "id") int id) {
+	public List<Voorstelling> toonallevoorstellingen() {
 
 		TypedQuery<Voorstelling> q = em.createQuery(
-				"SELECT v FROM Voorstelling v WHERE v.id = :id", Voorstelling.class);
-		q.setParameter("id", id);
+				"SELECT v FROM Voorstelling v", Voorstelling.class);
 		return q.getResultList();
 	}
 }
