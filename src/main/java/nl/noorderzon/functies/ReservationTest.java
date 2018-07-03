@@ -6,9 +6,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ReservationTest {
 
+    // om de if-else statement te testen worden voor de beide condities een test gemaakt.
     @Test
-    void calculate() {
-        assertEquals();
+    public void calculateStatementOne() {
+        assertTrue();
     }
 
     @Test
