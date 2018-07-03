@@ -460,14 +460,14 @@ h3 {
     }
 }
 
-.search-form input[type="submit"] {
+.search-form input[type="submit"], button {
     width: 30%;
     font-size: 16px;
     padding: 5px;
 }
 
 @media (max-width: 767px) {
-    .search-form input[type="submit"] {
+    .search-form input[type="submit"], button {
         width: 80%;
     }
 }
@@ -495,10 +495,10 @@ h3 {
 .search-form button {
     text-align: center;
     position: absolute;
-    width: 35%;
-    right: 2em;
-    margin-top: 6px;
+    width: 30%;
     border-radius: 4px;
+    background-color: #9b9b9b;
+    cursor: pointer;
 }
 
 @media (max-width: 767px ) {
