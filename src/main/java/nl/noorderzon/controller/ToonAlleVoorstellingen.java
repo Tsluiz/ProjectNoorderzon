@@ -16,8 +16,8 @@ public class ToonAlleVoorstellingen {
 	@PersistenceContext
 	private EntityManager em;
 
-	@RequestMapping(path = "/toonallevoorstellingen")
-	public List<Voorstelling> toonallevoorstellingen() {
+    @RequestMapping(path = "/allevoorstellingen")
+    public List<Voorstelling> allevoorstellingen() {
 
 		TypedQuery<Voorstelling> q = em.createQuery(
 				"SELECT v FROM Voorstelling v", Voorstelling.class);
