@@ -4,7 +4,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.util.Scanner;
 
-public class InvoerExposant implements AutoCloseable {
+public class InvoerExposant {
 	private EntityManagerFactory emf = Persistence.createEntityManagerFactory("nl/noorderzon/controller");
 
 	public void close() {
