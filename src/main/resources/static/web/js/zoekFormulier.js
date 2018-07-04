@@ -12,7 +12,7 @@ function loadShows() {
             $ul.append($li);
         }
         */
-        $table = $('.section-table tbody');
+        var $table = $('.section-table tbody');
         $table.empty();
         for (var i = 0; i < shows.length; i++) {
             console.log(shows[i]);
@@ -29,4 +29,8 @@ function loadShows() {
     });
 }
 
-$('#artiestbutton').click(loadShows());
+$(document).ready(function () {
+    $('#artiestbutton').click(loadShows();
+)
+    ;
+}
