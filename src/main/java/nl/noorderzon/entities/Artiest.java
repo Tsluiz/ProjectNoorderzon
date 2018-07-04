@@ -4,14 +4,13 @@ package nl.noorderzon.entities;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
-import java.util.List;
 import java.util.Set;
 
 @Entity
 @Table (name = "artiest")
 public class Artiest {
 
-    @Column(name = "idartiest")
+    @Column(name = "id")
     @Id
     private int idartiest;
 

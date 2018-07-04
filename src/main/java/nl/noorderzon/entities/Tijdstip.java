@@ -4,22 +4,21 @@ package nl.noorderzon.entities;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
-import java.util.List;
 import java.util.Set;
 
 @Entity
-@Table(name = "tijd")
-public class Tijd {
+@Table(name = "tijdstip")
+public class Tijdstip {
 
-    @Column(name = "idtijd")
+    @Column(name = "id")
     @Id
     private int id;
 
     @Column(name = "dag")
     private String dag;
 
-    @Column(name = "tijdstip")
-    private String tijdstip;
+    @Column(name = "tijd")
+    private String tijd;
 
     @OneToMany(mappedBy = "tijdstip")
     @JsonIgnore
@@ -43,11 +42,11 @@ public class Tijd {
     }
 
     public String getTijdstip() {
-        return tijdstip;
+        return tijd;
     }
 
     public void setTijdstip(String tijdstip) {
-        this.tijdstip = tijdstip;
+        this.tijd = tijdstip;
     }
 
     public Set<Voorstelling> getVoorstellingPerTijdslot() {
