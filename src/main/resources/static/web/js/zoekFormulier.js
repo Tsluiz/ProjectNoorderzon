@@ -29,8 +29,4 @@ function loadShows() {
     });
 }
 
-$(document).ready(function () {
-    $('#artiestbutton').click(loadShows();
-)
-    ;
-}
+$('#artiestbutton').click(loadShows);
