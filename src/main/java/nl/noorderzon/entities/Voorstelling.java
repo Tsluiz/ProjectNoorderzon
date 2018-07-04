@@ -16,11 +16,11 @@ public class Voorstelling {
 //maar kunnen we er dan nog wel mee rekenen?
 
     @ManyToOne
-    @JoinColumn(name = "artiest_idartiest")
+    @JoinColumn(name = "artiest_id")
     private Artiest artiest;
 
     @ManyToOne
-    @JoinColumn(name = "tijd_idtijd")
+    @JoinColumn(name = "tijdstip_id")
     private Tijdstip tijdstip;
 
 

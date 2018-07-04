@@ -14,7 +14,7 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/functions.js"></script>
-    <script src="js/zoekFormulier.js"></script>
+
 </head>
 <body>
 
@@ -34,7 +34,7 @@
                         <br/>
                         <label>Vul (een deel van) de naam in van de artiest die je zoekt:</label><br/>
                             <input type="text" name="zoekopartiest">
-                            <button id="artiestbutton">zoek op artiest</button>
+                        <button id="artiestbutton" onclick="loadShows();">zoek op artiest</button>
                             <br/>
                             <label>Vul (een deel van) de naam in van de voorstelling die je zoekt:<br/>
                                 <input type="text" name="zoekopvoorstelling">
@@ -95,6 +95,7 @@
 <div w3-include-html="footer.html"></div>
 
 <script src="js/includeHTML.js"></script>
+<script src="js/zoekFormulier.js"></script>
 
 </body>
 </html>

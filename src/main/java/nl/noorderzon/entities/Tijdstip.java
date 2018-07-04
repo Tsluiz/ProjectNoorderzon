@@ -45,8 +45,8 @@ public class Tijdstip {
         return tijd;
     }
 
-    public void setTijdstip(String tijdstip) {
-        this.tijd = tijdstip;
+    public void setTijdstip(String tijd) {
+        this.tijd = tijd;
     }
 
     public Set<Voorstelling> getVoorstellingPerTijdslot() {
