@@ -10,8 +10,8 @@ import javax.persistence.metamodel.StaticMetamodel;
 public abstract class Locatie_ {
 
 	public static volatile SingularAttribute<Locatie, Integer> maxCapaciteit;
-	public static volatile SingularAttribute<Locatie, Integer> idlocatie;
 	public static volatile SetAttribute<Locatie, Artiest> artiestenVanDezeLocatie;
+	public static volatile SingularAttribute<Locatie, Integer> id;
 	public static volatile SingularAttribute<Locatie, String> naam;
 
 }
