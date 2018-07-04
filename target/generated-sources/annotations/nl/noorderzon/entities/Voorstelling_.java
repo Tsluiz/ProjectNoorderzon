@@ -10,7 +10,7 @@ public abstract class Voorstelling_ {
 
 	public static volatile SingularAttribute<Voorstelling, Integer> capaciteit;
 	public static volatile SingularAttribute<Voorstelling, Artiest> artiest;
-	public static volatile SingularAttribute<Voorstelling, Tijd> tijdstip;
+	public static volatile SingularAttribute<Voorstelling, Tijdstip> tijdstip;
 	public static volatile SingularAttribute<Voorstelling, Integer> id;
 
 }

@@ -13,7 +13,7 @@ public class ZoekOpArtiestController {
 	@PersistenceContext
 	private EntityManager em;
 
-	@RequestMapping(value = "/zoekArtiest")
+	@RequestMapping(value = "/zoekopartiestnaam")
 	public List<Voorstelling> zoekOpArtiest(
 			@RequestParam(value = "zoekopartiestnaam") String naam) {
 		TypedQuery<Voorstelling> q = em.createQuery(

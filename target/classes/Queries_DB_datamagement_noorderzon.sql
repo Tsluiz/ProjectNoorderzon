@@ -1,14 +1,14 @@
 /*Maak een selectie vanuit de tabellen waarbij je alles selecteert)*/
 SELECT * FROM artiest;
 SELECT * FROM locatie;
-SELECT * FROM tijd;
+SELECT * FROM tijdstip;
 SELECT * FROM voorstelling;
 /*Laad data in de verschillende tabellen*/
 INSERT INTO artiest (naam, genre, naam_voorstelling)
 VALUES (value1, value2, value3);
 INSERT INTO locatie (naam, capaciteit)
 VALUES (value1, value2);
-INSERT INTO tijd (dag, tijdstip)
+INSERT INTO tijdstip (dag, tijd)
 VALUES (value1, value2);
 INSERT INTO table_name (voorstelling_naam, capaciteit)
 VALUES (value1, value2);
