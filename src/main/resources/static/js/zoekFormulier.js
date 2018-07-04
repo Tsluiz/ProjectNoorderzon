@@ -1,4 +1,5 @@
 function loadShows() {
+//    var invoer = x;
     jQuery.get('/allevoorstellingen', function (data) {
         var shows = data;
         /*
