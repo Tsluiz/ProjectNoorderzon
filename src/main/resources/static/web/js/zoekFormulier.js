@@ -12,14 +12,14 @@ function loadShows() {
             $ul.append($li);
         }
         */
-        $table = $('.section-table tbody');
+        var $table = $('.section-table tbody');
         $table.empty();
         for (var i = 0; i < shows.length; i++) {
             console.log(shows[i]);
-            var tijdstip = shows[i].tijdstip.dag + " " + shows[i].tijdstip.tijd.tijdstip;
+            var tijdstip = shows[i].tijdstip.dag + " " + shows[i].tijdstip.tijd;
             var artiest = shows[i].artiest.naam;
             var titel = shows[i].artiest.naamVoorstelling;
-            var locatie = shows[i].locatie.naam;
+            var locatie = shows[i].artiest.locatie.naam;
             var beschikbaar = shows[i].capaciteit;
 
             var row = "<tr><td>" + tijdstip + "</td><td>" + artiest + "</td><td>" + titel + "</td><td>" + locatie + "</td><td>" + beschikbaar + "</td></tr>";
@@ -29,4 +29,4 @@ function loadShows() {
     });
 }
 
-$('#artiestbutton').click(loadShows());
+$('#artiestbutton').click(loadShows);

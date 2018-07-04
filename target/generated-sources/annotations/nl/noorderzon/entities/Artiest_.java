@@ -12,7 +12,7 @@ public abstract class Artiest_ {
 	public static volatile SingularAttribute<Artiest, Locatie> vasteLocatie;
 	public static volatile SetAttribute<Artiest, Voorstelling> voorstellingenVanArtiest;
 	public static volatile SingularAttribute<Artiest, String> genre;
-	public static volatile SingularAttribute<Artiest, Integer> idartiest;
+	public static volatile SingularAttribute<Artiest, Integer> id;
 	public static volatile SingularAttribute<Artiest, String> naam;
 	public static volatile SingularAttribute<Artiest, String> naamVoorstelling;
 

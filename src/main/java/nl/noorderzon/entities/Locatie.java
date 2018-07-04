@@ -11,7 +11,7 @@ public class Locatie {
 
     @Column(name = "id")
     @Id
-    private int idlocatie;
+    private int id;
 
     @Column(name = "naam", nullable = false)
     private String naam;
@@ -23,9 +23,13 @@ public class Locatie {
     @JsonIgnore
     private Set<Artiest> artiestenVanDezeLocatie;
 
-    public int getIdlocatie() {return idlocatie;}
+    public int getId() {
+        return id;
+    }
 
-    public void setIdlocatie(int idlocatie) {this.idlocatie = idlocatie;}
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getNaam() {
         return naam;

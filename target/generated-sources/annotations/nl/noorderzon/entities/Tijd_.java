@@ -6,13 +6,13 @@ import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
 @Generated(value = "org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor")
-@StaticMetamodel(Tijd.class)
+@StaticMetamodel(Tijdstip.class)
 public abstract class Tijd_ {
 
-	public static volatile SetAttribute<Tijd, Voorstelling> voorstellingPerTijdslot;
-	public static volatile SingularAttribute<Tijd, String> tijdstip;
-	public static volatile SingularAttribute<Tijd, Integer> id;
-	public static volatile SingularAttribute<Tijd, String> dag;
+	public static volatile SetAttribute<Tijdstip, Voorstelling> voorstellingPerTijdslot;
+	public static volatile SingularAttribute<Tijdstip, String> tijdstip;
+	public static volatile SingularAttribute<Tijdstip, Integer> id;
+	public static volatile SingularAttribute<Tijdstip, String> dag;
 
 }
 

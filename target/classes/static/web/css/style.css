@@ -538,6 +538,7 @@ h3 {
     background: url("../images/s-1.png") left center no-repeat;
     padding-top: 50px;
     vertical-align: top;
+    height: fit-content;
 }
 
 .section-table div {
