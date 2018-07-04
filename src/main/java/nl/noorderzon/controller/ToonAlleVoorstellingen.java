@@ -24,19 +24,3 @@ public class ToonAlleVoorstellingen {
 		return q.getResultList();
 	}
 }
-/*	@GetMapping(path="/all")
-	public @ResponseBody Iterable<Voorstelling> getAllUsers() {
-		// This returns a JSON or XML with the users
-		return
-	}
-}
-*/
-/*
-	@GetMapping("/add") // Map ONLY GET Requests
-	public @ResponseBody String addNewArtiest (@RequestParam String name){
-		// @ResponseBody means the returned String is the response, not a view name
-		// @RequestParam means it is a parameter from the GET or POST request
-		voorstellingen = new ArrayList<>();
-
-		return "Saved";
-	}*/

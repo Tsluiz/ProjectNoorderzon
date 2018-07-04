@@ -8,14 +8,14 @@ import javax.persistence.TypedQuery;
 import java.util.List;
 
 @RestController
-public class Controller {
+public class ZoekOpArtiestController {
 
 	@PersistenceContext
 	private EntityManager em;
 
 	@RequestMapping(value = "/zoekArtiest")
 	public List<Voorstelling> zoekOpArtiest(
-			@RequestParam(value = "naamvanartiest") String naam) {
+			@RequestParam(value = "zoekopartiestnaam") String naam) {
 		TypedQuery<Voorstelling> q = em.createQuery(
                 "SELECT v FROM Voorstelling v WHERE v.artiest.naam LIKE :naamvanartiest", Voorstelling.class);
         q.setParameter("naamvanartiest", naam);

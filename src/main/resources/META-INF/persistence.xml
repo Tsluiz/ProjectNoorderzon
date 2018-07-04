@@ -5,7 +5,7 @@
              version="2.0">
     <persistence-unit name="nl.noorderzon.hibernate">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <class>nl.noorderzon.controller.Controller</class>
+        <class>nl.noorderzon.controller.ZoekOpArtiestController</class>
         <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/noorderzon_data"/>
             <property name="javax.persistence.jdbc.user" value="root"/>
