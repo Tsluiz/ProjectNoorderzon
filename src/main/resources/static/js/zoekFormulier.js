@@ -23,7 +23,7 @@ function loadShows() {
             var locatie = shows[i].artiest.locatie.naam;
             var beschikbaar = shows[i].capaciteit;
 
-            var row = "<tr><td>" + tijdstip + "</td><td>" + artiest + "</td><td>" + titel + "</td><td>" + locatie + "</td><td>" + beschikbaar + "</td></tr>";
+            var row = "<tr><td>" + tijdstip + "</td><td>" + artiest + "</td><td>" + titel + "</td><td>" + locatie + "</td><td>" + beschikbaar + " tickets</td></tr>";
 
             $table.append(row);
         }
