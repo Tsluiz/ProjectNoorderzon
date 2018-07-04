@@ -23,14 +23,14 @@ DROP TABLE IF EXISTS `artiest`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `artiest` (
-  `idartiest` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `naam` varchar(45) DEFAULT NULL,
   `genre` varchar(45) DEFAULT NULL,
   `naam_voorstelling` varchar(45) DEFAULT NULL,
-  `locatie_idlocatie` int(11) NOT NULL,
-  PRIMARY KEY (`idartiest`),
-  KEY `fk_artiest_locatie1_idx` (`locatie_idlocatie`),
-  CONSTRAINT `fk_artiest_locatie1` FOREIGN KEY (`locatie_idlocatie`) REFERENCES `locatie` (`idlocatie`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  `locatie_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_artiest_locatie1_idx` (`locatie_id`),
+  CONSTRAINT `fk_artiest_locatie1` FOREIGN KEY (`locatie_id`) REFERENCES `locatie` (id) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -52,10 +52,10 @@ DROP TABLE IF EXISTS `locatie`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `locatie` (
-  `idlocatie` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `naam` varchar(45) DEFAULT NULL,
   `capaciteit` int(11) DEFAULT NULL,
-  PRIMARY KEY (`idlocatie`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -73,24 +73,24 @@ UNLOCK TABLES;
 -- Table structure for table `tijd`
 --
 
-DROP TABLE IF EXISTS `tijd`;
+DROP TABLE IF EXISTS `tijdstip`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tijd` (
-  `idtijd` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tijdstip` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `dag` varchar(45) DEFAULT NULL,
-  `tijdstip` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`idtijd`)
+  `tijd` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tijd`
+-- Dumping data for table `tijdstip`
 --
 
 LOCK TABLES `tijd` WRITE;
-/*!40000 ALTER TABLE `tijd` DISABLE KEYS */;
-INSERT INTO `tijd` VALUES (1,'dinsdag','18.00'),(2,'dinsdag','19.00'),(3,'dinsdag','20.00'),(4,'woensdag','18.00'),(5,'woensdag','19.00'),(6,'woensdag','20.00'),(7,'donderdag','18.00'),(8,'donderdag','19.00'),(9,'donderdag','20.00'),(10,'vrijdag','18.00'),(11,'vrijdag','19.00'),(12,'vrijdag','20.00');
+/*!40000 ALTER TABLE `tijdstip` DISABLE KEYS */;
+INSERT INTO tijdstip VALUES (1,'dinsdag','18.00'),(2,'dinsdag','19.00'),(3,'dinsdag','20.00'),(4,'woensdag','18.00'),(5,'woensdag','19.00'),(6,'woensdag','20.00'),(7,'donderdag','18.00'),(8,'donderdag','19.00'),(9,'donderdag','20.00'),(10,'vrijdag','18.00'),(11,'vrijdag','19.00'),(12,'vrijdag','20.00');
 /*!40000 ALTER TABLE `tijd` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -102,15 +102,15 @@ DROP TABLE IF EXISTS `voorstelling`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `voorstelling` (
-  `idvoorstelling` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `resterende_plaatsen` int(11) DEFAULT NULL,
-  `artiest_idartiest` int(11) NOT NULL,
-  `tijd_idtijd` int(11) NOT NULL,
-  PRIMARY KEY (`idvoorstelling`),
-  KEY `fk_voorstelling_artiest_idx` (`artiest_idartiest`),
-  KEY `fk_voorstelling_tijd1_idx` (`tijd_idtijd`),
-  CONSTRAINT `fk_voorstelling_artiest` FOREIGN KEY (`artiest_idartiest`) REFERENCES `artiest` (`idartiest`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_voorstelling_tijd1` FOREIGN KEY (`tijd_idtijd`) REFERENCES `tijd` (`idtijd`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  `artiest_id` int(11) NOT NULL,
+  `tijdstip_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_voorstelling_artiest_idx` (`artiest_id`),
+  KEY `fk_voorstelling_tijd1_idx` (`tijdstip_id`),
+  CONSTRAINT `fk_voorstelling_artiest` FOREIGN KEY (`artiest_id`) REFERENCES `artiest` (id) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_voorstelling_tijd1` FOREIGN KEY (`tijdstip_id`) REFERENCES tijdstip (id) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

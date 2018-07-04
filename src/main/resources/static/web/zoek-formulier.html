@@ -32,13 +32,14 @@
                     <li>
                         <h3>Zoek hier een artiest of voorstelling</h3>
                         <br/>
-                        <label>Vul (een deel van) de naam in van de artiest die je zoekt:<br/>
+                        <label>Vul (een deel van) de naam in van de artiest die je zoekt:</label><br/>
                             <input type="text" name="zoekopartiest">
                             <button id="artiestbutton">zoek op artiest</button>
                             <br/>
                             <label>Vul (een deel van) de naam in van de voorstelling die je zoekt:<br/>
                                 <input type="text" name="zoekopvoorstelling">
-                                <input type="submit" value="zoek op voorstelling"></label><br/>
+                                <input type="submit" value="zoek op voorstelling">
+                            </label><br/>
                     </li>
                 </ul>
             </fieldset>
@@ -60,65 +61,26 @@
     </div>
 
     <div class="row section section-table">
-        <div class="col-lg-2 offset-lg-2 " style="padding: 0;">
+        <div class="col-lg-10 offset-lg-2 ">
             <table>
+                <thead>
                 <tr>
-                    <th>Tijd</th>
+                    <th class="col-lg-2">Tijdstip</th>
+                    <th class="col-lg-2">Artiest</th>
+                    <th class="col-lg-2">Naam voorstelling</th>
+                    <th class="col-lg-2">Locatie</th>
+                    <th class="col-lg-2">Beschikbare tickets</th>
                 </tr>
+                </thead>
+                <tbody>
                 <tr>
-                    <td>Maandag 20:30</td>
+                    <td>Vb ma 14:00</td>
+                    <td>Vb Henk</td>
+                    <td>Vb Grootste show aller tijden</td>
+                    <td>Vb Main stage</td>
+                    <td>Vb 25</td>
                 </tr>
-                <tr>
-                    <td>Maandag 21:00</td>
-                </tr>
-                <tr>
-                    <td>Dinsdag 23:00</td>
-                </tr>
-            </table>
-        </div>
-        <div class="col-lg-2">
-            <table>
-                <tr>
-                    <th>Artiest</th>
-                <tr>
-                    <td>Theater Tom</td>
-                </tr>
-                <tr>
-                    <td>Dans Marikes</td>
-                </tr>
-                <tr>
-                    <td>Gitaar Gerrit</td>
-                </tr>
-            </table>
-        </div>
-        <div class="col-lg-2">
-            <table>
-                <tr>
-                    <th>Locatie</th>
-                <tr>
-                    <td>Container</td>
-                </tr>
-                <tr>
-                    <td>Main stage</td>
-                </tr>
-                <tr>
-                    <td>Second stage</td>
-                </tr>
-            </table>
-        </div>
-        <div class="col-lg-3">
-            <table>
-                <tr>
-                    <th>Titel</th>
-                <tr>
-                    <td>Thrilling Theatre</td>
-                </tr>
-                <tr>
-                    <td>Zwanen</td>
-                </tr>
-                <tr>
-                    <td>Rock until you drop</td>
-                </tr>
+                </tbody>
             </table>
         </div>
     </div>

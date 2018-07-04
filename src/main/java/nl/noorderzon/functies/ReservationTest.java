@@ -1,6 +1,7 @@
 package nl.noorderzon.functies;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -8,7 +9,7 @@ class ReservationTest {
 
     @Test
     void calculate() {
-        assertEquals();
+        assertEquals(1, 500);
     }
 
     @Test

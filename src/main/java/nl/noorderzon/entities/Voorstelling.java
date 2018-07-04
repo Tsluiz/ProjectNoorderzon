@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Table (name = "voorstelling")
 public class Voorstelling {
 
-    @Column (name = "idvoorstelling")
+    @Column(name = "id")
     @Id
     private int id;
 
@@ -21,7 +21,7 @@ public class Voorstelling {
 
     @ManyToOne
     @JoinColumn(name = "tijd_idtijd")
-    private Tijd tijdstip;
+    private Tijdstip tijdstip;
 
 
     public int getId() {
@@ -48,11 +48,11 @@ public class Voorstelling {
         this.artiest = artiest;
     }
 
-    public Tijd getTijdstip() {
+    public Tijdstip getTijdstip() {
         return tijdstip;
     }
 
-    public void setTijdstip(Tijd tijdstip) {
+    public void setTijdstip(Tijdstip tijdstip) {
         this.tijdstip = tijdstip;
     }
 
