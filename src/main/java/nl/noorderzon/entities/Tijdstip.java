@@ -41,11 +41,11 @@ public class Tijdstip {
         this.dag = dag;
     }
 
-    public String getTijdstip() {
+    public String getTijd() {
         return tijd;
     }
 
-    public void setTijdstip(String tijd) {
+    public void setTijd(String tijd) {
         this.tijd = tijd;
     }
 
