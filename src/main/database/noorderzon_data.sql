@@ -88,10 +88,10 @@ CREATE TABLE `tijdstip` (
 -- Dumping data for table `tijdstip`
 --
 
-LOCK TABLES `tijd` WRITE;
+LOCK TABLES `tijdstip` WRITE;
 /*!40000 ALTER TABLE `tijdstip` DISABLE KEYS */;
 INSERT INTO tijdstip VALUES (1,'dinsdag','18.00'),(2,'dinsdag','19.00'),(3,'dinsdag','20.00'),(4,'woensdag','18.00'),(5,'woensdag','19.00'),(6,'woensdag','20.00'),(7,'donderdag','18.00'),(8,'donderdag','19.00'),(9,'donderdag','20.00'),(10,'vrijdag','18.00'),(11,'vrijdag','19.00'),(12,'vrijdag','20.00');
-/*!40000 ALTER TABLE `tijd` ENABLE KEYS */;
+/*!40000 ALTER TABLE `tijdstip` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --

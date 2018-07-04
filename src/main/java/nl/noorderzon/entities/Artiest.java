@@ -12,7 +12,7 @@ public class Artiest {
 
     @Column(name = "id")
     @Id
-    private int idartiest;
+    private int id;
 
     @Column (name = "naam")
     private String naam;
@@ -24,7 +24,7 @@ public class Artiest {
     private String naamVoorstelling;
 
     @ManyToOne
-    @JoinColumn(name = "locatie_idlocatie")
+    @JoinColumn(name = "locatie_id")
     private Locatie vasteLocatie;
 
     @OneToMany(mappedBy = "artiest")
@@ -32,9 +32,13 @@ public class Artiest {
     private Set<Voorstelling> voorstellingenVanArtiest;
 
 
-    public int getIdartiest() { return idartiest; }
+    public int getId() {
+        return id;
+    }
 
-    public void setIdartiest(int idartiest) {this.idartiest = idartiest;}
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getNaam() {
         return naam;
