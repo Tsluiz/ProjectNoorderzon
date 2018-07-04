@@ -36,8 +36,7 @@ public class Reservation {
     }
 
     // Main aangemaakt om te testen
-    public static void main(String[] args) {
-        Reservation c = new Reservation(4);
+    public static void main(String[] args) {Reservation c = new Reservation(4);
     }
 
     public void Calculate(int quant_res) {
@@ -73,16 +72,6 @@ public class Reservation {
         }
     }
 
-
-    /**
-     * public String getAvailable() {
-     * if (cap_loc > 0) {
-     * return "" + cap_loc;
-     * } else {
-     * return "No seats left";
-     * }
-     * }
-     */
 
     public int getCapacity() {
         return capacity;
