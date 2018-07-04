@@ -11,13 +11,5 @@ import java.util.Set;
 
 @Repository
 public interface VoorstellingRepository extends JpaRepository<Voorstelling, Integer> {
-    Set<Voorstelling> findVoorstellingByArtiest_Naam(@Param("artiest") String naam);
-    //(@Param("artiestNaam") String artiestNaam);
-
-    Set<Voorstelling> findVoorstellingByArtiest_NaamVoorstelling(@Param("naam") String name);
-
-    Set<Voorstelling> findVoorstellingByArtiest_Genre(@Param("genre") String genre);
-
-    //   List<Voorstelling> findAll();
 
 }
