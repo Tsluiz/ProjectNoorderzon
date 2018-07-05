@@ -13,9 +13,9 @@ public class ZoekOpArtiestController {
 	@PersistenceContext
 	private EntityManager em;
 
-	@RequestMapping(value = "/zoekopartiestnaam")
+    @RequestMapping(value = "/voorstellingen")
 	public List<Voorstelling> zoekOpArtiest(
-			@RequestParam(value = "naam") String naam) {
+            @RequestParam(value = "artiestnaam") String naam) {
 		TypedQuery<Voorstelling> q = em.createQuery(
 				"SELECT v FROM Voorstelling v WHERE v.artiest.naam LIKE :artiestnaam", Voorstelling.class);
 		q.setParameter("artiestnaam", naam);

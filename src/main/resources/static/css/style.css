@@ -584,7 +584,7 @@ button.put-button {
 }
 
 .voorstellingen th {
-    background-color: rgba(10, 204, 102, 0.5);
+    background-color: rgba(10, 204, 102, 0.8);
     text-indent: 10px;
     color: #262626;
 }
@@ -594,8 +594,8 @@ button.put-button {
 }
 
 .voorstellingen tbody tr:nth-child(odd) {
-    background-color: rgba(74, 74, 74, 0.5);
-    color: #fff;
+    background-color: rgba(155, 155, 155, 0.5);
+    color: #4a4a4a;
 }
 
 .col-tijdstip {
