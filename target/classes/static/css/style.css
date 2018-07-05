@@ -1,0 +1,593 @@
+@font-face {
+    font-family: Averta;
+    src: url(../fonts/averta-regular.otf);
+}
+
+/* ---------------
+reset CSS - start */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ---------------
+reset CSS - end */
+
+body, button {
+  font-family: Averta, sans-serif;
+  font-size: 20px;
+  color: #4a4a4a;
+    background: #fff url(../images/body-bg-left.jpg) left top no-repeat;
+
+}
+
+h2 {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 30px;
+    margin: 0 0 0 -10px;
+}
+.container {
+    min-height: 80vh;
+}
+
+/* -- Intro page --  */
+.start {
+  position: fixed;
+ /* transform: 1s ease-out; */
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background: url(../images/start-bg.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.hidden {
+    display: none;
+}
+
+#logo-front {
+    width: 25%;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+@media (max-width: 767px) {
+    #logo-front {
+        margin: 150px 10%;
+        width: 80%;
+    }
+}
+
+.overlay {
+    top: 0;
+    right:0;
+    float: right;
+    width: 62%;
+    height: 100%;
+    background-color: rgba(10, 204, 102, 0.5);
+}
+
+.start-button-area {
+    font-size: 20px;
+    text-align: center;
+    position: fixed;
+    width: 20%;
+    top: 60%;
+    left: 40%;
+}
+
+.start-button-area p {
+    font-style: italic;
+    font-size: 14px;
+}
+
+.start-button {
+    padding: 10px 40px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 4px;
+    border-color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+.start-button:hover {
+    cursor: pointer;
+}
+
+/* -- End of Intro page --  */
+
+
+/* -- Top menu --  */
+
+.top-bar {
+    padding: 5px 20px;
+    vertical-align: bottom;
+    background-color: #eeeeee;
+    box-shadow: 0 0 2px 2px #aaaaaa;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 15;
+    height: 30px;
+}
+
+.top-bar img {
+    margin-top: 4px;
+}
+
+.top-menu {
+    float: right;
+    color: #0acc66;
+    vertical-align: bottom;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
+
+@media (max-width: 767px) {
+    .top-menu {
+        left: 0;
+        top: 30px;
+    }
+}
+
+.top-menu a {
+    color: #0acc66;
+    vertical-align: bottom;
+}
+
+.top-menu li {
+
+    display: inline;
+    vertical-align: bottom;
+    margin: 0 25px;
+    font-size: 25px;
+}
+
+@media (max-width: 767px) {
+    .top-menu li, ul {
+        display: list-item;
+    }
+}
+
+@media (max-width: 767px) {
+    .top-menu ul {
+        margin-left: -15px;
+        background-color: rgba(250, 250, 250, 0.8);
+        width: fit-content;
+        border-radius: 0 0 4px 0;
+        box-shadow: 2px 2px 2px 0px #aaaaaa;
+    }
+}
+
+/* -- End of Top menu --  */
+
+/* -- Navigation bar --  */
+.navigation {
+    background: url("../images/noorderzon-sfeer.jpg") no-repeat center bottom;
+    background-size: cover;
+    height: 200px;
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: -60px;
+    padding-top: 25px;
+}
+
+/* -- End of Navigation bar --  */
+
+.section-img-3 {
+    vertical-align: center;
+    margin-top: -25px;
+}
+
+.section-img-3 img {
+    margin: auto auto auto -75px;
+}
+
+@media (max-width: 991px) {
+    .section-img-3 {
+
+        z-index: 1;
+    }
+}
+
+.section-title-3 {
+    position: absolute;
+    padding: 5px;
+    bottom: 24%;
+    left: 2.8em;
+    border: 0 solid #fff;
+    border-radius: 4px;
+    font-size: 65px;
+    text-transform: uppercase;
+    color: #fff;
+    width: 180px;
+    text-align: left;
+/ /;
+}
+
+@media (max-width: 991px) {
+    .section-title-3 {
+        margin-top: 10px;
+    }
+}
+
+.small {
+    display: initial;
+}
+
+.wide {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .section-title-3 {
+        background-color: rgba(50, 50, 50, 0.2);
+        left: 0;
+        top: 0;
+        width: auto;
+        height: fit-content;
+        z-index: 10;
+    }
+
+    .small {
+        display: none;
+    }
+
+    .wide {
+        display: initial;
+    }
+}
+
+.img-test-2 {
+    float: left;
+    width: 50%;
+}
+
+.block, .block li, .block ul {
+    text-align: center;
+    display: inline;
+}
+
+.block img {
+    margin: 15px;
+}
+
+@media (max-width: 767px) {
+    .block img {
+        margin: 5px;
+    }
+}
+
+
+/* -- Section --  */
+.section {
+    height: 550px;
+}
+
+@media (max-width: 991px) {
+    .section {
+        height: initial;
+    }
+}
+
+.section-header {
+    text-transform: uppercase;
+    font-size: 24px;
+    text-align: center;
+}
+
+.item-img img {
+    opacity: 0.5;
+}
+
+.img-test {
+    float: left;
+    width: 25%;
+}
+
+.img-test img {
+    width: 100%;
+}
+
+.invert {
+    border-color: #4a4a4a;
+    color: #4a4a4a;
+    background-color: rgba(200, 200, 200, 0.3);
+}
+
+/* -- Section items --  */
+.items {
+    margin: auto;
+    height: 320px;
+    z-index: 2;
+}
+
+@media (max-width: 991px) {
+    .items {
+        margin-top: -500px;
+        height: initial;
+        padding-bottom: 80px;
+    }
+}
+
+
+.line-up li:hover, .block img:hover {
+    -webkit-transition: all 150ms ease-in;
+    -webkit-transform: scale(1.05);
+    -ms-transition: all 150ms ease-in;
+    -ms-transform: scale(1.05);
+    -moz-transition: all 150ms ease-in;
+    -moz-transform: scale(1.05);
+    transition: all 150ms ease-in;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.line-up {
+    text-align: center;
+}
+
+.items p {
+    position: absolute;
+    padding: 5px;
+    left: 23em;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    font-size: 18px;
+    color: #fff;
+    width: 220px;
+    text-align: center;
+    background-color: rgba(50, 50, 50, 0.3);
+    margin-top: -40px;
+}
+
+@media (min-width: 1200px) {
+    .items p {
+        left: 25em;
+    }
+}
+
+@media (max-width: 767px) {
+    .items p {
+        left: 2em;
+    }
+}
+
+/* Search Form */
+.search-form {
+    text-align: left;
+    list-style: none;
+    margin: 8% auto;
+}
+
+@media (max-width: 767px) {
+    .search-form {
+        text-align: center;
+    }
+}
+
+.search-form label {
+    width: 100%;
+}
+
+.search-form fieldset {
+    background-color: rgba(50, 50, 50, 0.2);
+    border-radius: 4px;
+    padding: 15px 25px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 991px) {
+    .search-form {
+        z-index: 10;
+    / / background-color: rgba(50, 50, 50, 0.2);
+        margin-top: -500px;
+    }
+}
+
+.search-form input, .search-form select {
+    margin: 3px 0;
+}
+
+@media (max-width: 991px) {
+    .search-form label, .search-form fieldset {
+        text-align: left;
+    }
+}
+
+.search-form input[type="text"] {
+    width: 50%;
+    margin-top: 1px;
+}
+
+@media (max-width: 767px) {
+    .search-form input[type="text"] {
+        width: 80%;
+    }
+}
+
+.search-form input[type="submit"], button {
+    width: 30%;
+    font-size: 16px;
+    padding: 5px;
+}
+
+@media (max-width: 767px) {
+    .search-form input[type="submit"], button {
+        width: 80%;
+    }
+}
+
+.search-form input[type="radio"] {
+    margin: 10px 15px;
+}
+
+.search-form input[type="checkbox"] {
+    width: auto;
+    margin: 10px 15px;
+}
+
+.search-form [placeholder], .search-form select {
+    font-size: 16px;
+    font-weight: 100;
+    font-style: italic;
+    padding: 0 10px;
+}
+
+.search-form select {
+    font-style: initial;
+}
+
+.search-form button {
+    text-align: center;
+    position: absolute;
+    width: 30%;
+    border-radius: 4px;
+    background-color: #9b9b9b;
+    cursor: pointer;
+}
+
+@media (max-width: 767px ) {
+    .search-form button {
+        width: fit-content;
+    }
+}
+
+.form {
+    text-align: right;
+}
+
+.form.top {
+    vertical-align: top;
+    padding-top: 5px;
+}
+
+/* -- Footer --  */
+
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    min-height: 180px;
+    width: 100vw;
+    background-color: rgba(74, 74, 74, 0.9);
+    color: #eee;
+    margin-top: -100px;
+}
+
+#fill-page {
+    position: static;
+    height: 250px;
+}
+
+.section-table {
+    background: url("../images/s-1.png") left center no-repeat;
+    padding-top: 50px;
+    vertical-align: top;
+    height: fit-content;
+}
+
+.voorstellingen {
+    table-layout: fixed;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.section-table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+}
+
+.section-table div {
+    padding: 0;
+}
+
+.col-lg-2 th, tr, table, td {
+    border-bottom: 2px solid black;
+    width: 100%;
+    text-indent: 10px;
+}
+
+.col-lg-2 td, .col-lg-3 td {
+    border-bottom: 2px solid gray;
+    text-indent: 0;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.col-tijdstip {
+    width: 15%;
+}
+
+.col-artiest {
+    width: 20%;
+}
+
+.col-voorstelling {
+    width: 25%;
+}
+
+.col-locatie {
+    width: 15%;
+}
+
+.col-beschikbaar {
+    width: 15%;
+}
+
