@@ -275,7 +275,7 @@ h3 {
 
 @media (max-width: 991px) {
     .section-title-3 {
-        background-color: rgba(50, 50, 50, 0.2);
+        background-color: rgba(50, 50, 50, 0.5);
         left: 0;
         top: 0;
         width: auto;
@@ -568,18 +568,29 @@ button.put-button {
     font-size: 20px;
 }
 
+@media (max-width: 992px) {
+    .voorstellingen th {
+        font-size: 17px;
+    }
+
+    .voorstellingen td {
+        font-size: 15px;
+    }
+}
+
 .voorstellingen td {
     border-bottom: 0px solid #9b9b9b;
     text-indent: 10px;
 }
 
 .voorstellingen th {
-    background-color: rgba(238, 238, 238, 0.5);
+    background-color: rgba(10, 204, 102, 0.5);
     text-indent: 10px;
+    color: #262626;
 }
 
 .voorstellingen tbody tr:nth-child(even) {
-    background-color: rgba(155, 155, 155, 0.5);
+    background-color: rgba(10, 204, 102, 0.5);
 }
 
 .voorstellingen tbody tr:nth-child(odd) {
@@ -607,3 +618,6 @@ button.put-button {
     width: 15%;
 }
 
+.genre-radio li {
+    display: inline;
+}
