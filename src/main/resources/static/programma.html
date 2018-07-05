@@ -14,7 +14,11 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/functions.js"></script>
-
+    <style>
+        body {
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
 
@@ -26,22 +30,16 @@
         <div class="col-lg-4 section-img-3"><img src="images/s-2.png">
             <p class="section-title-3 small">zoe ken</p>
             <p class="section-title-3 wide">zoeken</p></div>
-        <div class="col-lg-8 items search-form">
+        <div class="col-lg-8 search-form">
             <fieldset>
-                <ul>
-                    <li>
-                        <h3>Zoek hier een artiest of voorstelling</h3>
-                        <br/>
-                        <label>Vul (een deel van) de naam in van de artiest die je zoekt:</label><br/>
-                            <input type="text" name="zoekopartiest">
-                        <button id="artiestbutton">zoek op artiest</button>
-                            <br/>
-                            <label>Vul (een deel van) de naam in van de voorstelling die je zoekt:<br/>
-                                <input type="text" name="zoekopvoorstelling">
-                                <input type="submit" value="zoek op voorstelling">
-                            </label><br/>
-                    </li>
-                </ul>
+                <h3>Zoek hier een artiest of voorstelling</h3>
+                <div><label>Vul (een deel van) de naam in van de artiest die je zoekt:</label></div>
+                <input type="text" name="zoekopartiest">
+                <button id="artiestbutton">zoek op artiest</button>
+
+                <div><label>Vul (een deel van) de naam in van de voorstelling die je zoekt:</label></div>
+                <input type="text" name="zoekopvoorstelling">
+                <button id="voorstellingbutton">zoek op voorstelling</button>
             </fieldset>
             <br/>
             <fieldset>
@@ -52,7 +50,7 @@
                         <input id="muziek" type="radio" name="genre" value="m" title="Muziek">Muziek<br>
                         <input id="theater" type="radio" name="genre" value="t" title="Theater">Theater<br>
                         <input id="dans" type="radio" name="genre" value="d" title="Dans">Dans<br>
-                        <input type="submit" value="zoek op genre">
+                        <button id="genrebutton">zoek op genre</button>
                     </li>
                 </ul>
             </fieldset>
