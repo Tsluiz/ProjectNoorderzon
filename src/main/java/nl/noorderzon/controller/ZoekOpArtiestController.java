@@ -15,10 +15,10 @@ public class ZoekOpArtiestController {
 
 	@RequestMapping(value = "/zoekopartiestnaam")
 	public List<Voorstelling> zoekOpArtiest(
-			@RequestParam(value = "zoekopartiestnaam") String naam) {
+			@RequestParam(value = "naam") String naam) {
 		TypedQuery<Voorstelling> q = em.createQuery(
-                "SELECT v FROM Voorstelling v WHERE v.artiest.naam LIKE :naamvanartiest", Voorstelling.class);
-        q.setParameter("naamvanartiest", naam);
+				"SELECT v FROM Voorstelling v WHERE v.artiest.naam LIKE :artiestnaam", Voorstelling.class);
+		q.setParameter("artiestnaam", naam);
 
 		return q.getResultList();
 	}

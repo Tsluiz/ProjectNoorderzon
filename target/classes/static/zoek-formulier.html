@@ -34,7 +34,7 @@
                         <br/>
                         <label>Vul (een deel van) de naam in van de artiest die je zoekt:</label><br/>
                             <input type="text" name="zoekopartiest">
-                        <button id="artiestbutton" onclick="loadShows();">zoek op artiest</button>
+                        <button id="artiestbutton">zoek op artiest</button>
                             <br/>
                             <label>Vul (een deel van) de naam in van de voorstelling die je zoekt:<br/>
                                 <input type="text" name="zoekopvoorstelling">
@@ -61,15 +61,15 @@
     </div>
 
     <div class="row section section-table">
-        <div class="col-lg-10 offset-lg-2 ">
-            <table>
+        <div class="col-lg-12">
+            <table class="voorstellingen">
                 <thead>
                 <tr>
-                    <th class="col-lg-2">Tijdstip</th>
-                    <th class="col-lg-2">Artiest</th>
-                    <th class="col-lg-2">Naam voorstelling</th>
-                    <th class="col-lg-2">Locatie</th>
-                    <th class="col-lg-2">Beschikbare tickets</th>
+                    <th class="col-tijdstip">Tijdstip</th>
+                    <th class="col-artiest">Artiest</th>
+                    <th class="col-voorstelling">Naam voorstelling</th>
+                    <th class="col-locatie">Locatie</th>
+                    <th class="col-beschikbaar">Beschikbaar</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -78,7 +78,7 @@
                     <td>Vb Henk</td>
                     <td>Vb Grootste show aller tijden</td>
                     <td>Vb Main stage</td>
-                    <td>Vb 25</td>
+                    <td>Vb 25 tickets</td>
                 </tr>
                 </tbody>
             </table>

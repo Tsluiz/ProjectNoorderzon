@@ -541,6 +541,19 @@ h3 {
     height: fit-content;
 }
 
+.voorstellingen {
+    table-layout: fixed;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.section-table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+}
+
 .section-table div {
     padding: 0;
 }
@@ -557,3 +570,24 @@ h3 {
     padding: 10px;
     font-size: 16px;
 }
+
+.col-tijdstip {
+    width: 15%;
+}
+
+.col-artiest {
+    width: 20%;
+}
+
+.col-voorstelling {
+    width: 25%;
+}
+
+.col-locatie {
+    width: 15%;
+}
+
+.col-beschikbaar {
+    width: 15%;
+}
+
