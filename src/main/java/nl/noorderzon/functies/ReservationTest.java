@@ -33,13 +33,12 @@ public class ReservationTest {
     public void setUp() {
         res1 = new Reservation(5);
         res2 = new Reservation(2);
-        Capacity = 500;
-        //Quant_res = 4;
+        capacity = 500;
     }
+
     public void setUpStreams() {
         System.setOut(new PrintStream(outContent));
     }
-
 
     /*
     Tears down the test setup.
@@ -51,20 +50,16 @@ public class ReservationTest {
     }
     public void restoreStreams() {
         System.setOut(originalOut);
-        //    System.setErr(originalErr);
     }
 
     /**
      * Test that a reservation item is correctly initialised (quantity).
      */
     @Test
-    public void testInit()
-    {
+    public void testInit() {
         Reservation res1 = new Reservation(5);
         assertEquals(5, res1.getQuant_res());
-        assertEquals(1000, salesIte1.getPrice());
     }
-
 
 
     @Test
@@ -73,12 +68,13 @@ public class ReservationTest {
         assertEquals("ValidReservation", outContent.toString());
     }
 
-    @Test
+    // als er vrijdag nog tijd is dan deze nog uitwerken
+  /*  @Test
     public void testCalculate1(){
         Reservation res1 = new Reservation(4);
-        capacity = capacity - quant_res;
+        capacity = capacity - getQuant_res;
         assertEquals(true, )
-    }
+    }*/
 
 
 

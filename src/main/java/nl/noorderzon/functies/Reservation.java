@@ -19,6 +19,7 @@ public class Reservation {
     private int capacity;
     private boolean validReservation;
     private int voorstelling = 1;
+    private int quant_res;
 
     private static EntityManagerFactory emf =
             Persistence.createEntityManagerFactory("nl.noorderzon.hibernate");
@@ -30,9 +31,15 @@ public class Reservation {
      */
     public Reservation(int quant_res) {
         Calculate(quant_res);
+        this.quant_res = quant_res;
         System.out.println("ValidReservation = " + validReservation);
         System.out.println("Capacity = " + capacity);
         updateCapaciteit();
+
+    }
+
+    public int getQuant_res() {
+        return quant_res;
     }
 
     // Main aangemaakt om te testen
