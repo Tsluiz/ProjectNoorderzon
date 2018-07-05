@@ -20,7 +20,7 @@ public class ZoekOpVoorstellingNaam {
     public List<Voorstelling> zoekOpArtiest(
             @RequestParam(value = "naam") String naam) {
         TypedQuery<Voorstelling> q = em.createQuery(
-                "SELECT v FROM Voorstelling v WHERE v.naam LIKE :voorstellingnaam", Voorstelling.class);
+                "SELECT v FROM Voorstelling v WHERE v.artiest.naamVoorstelling LIKE :voorstellingnaam", Voorstelling.class);
         q.setParameter("voorstellingnaam", naam);
 
         return q.getResultList();
