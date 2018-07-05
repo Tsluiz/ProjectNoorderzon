@@ -564,28 +564,27 @@ button.put-button {
     white-space: nowrap;
 }
 
-.section-table td {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 16px;
+.voorstellingen th {
+    font-size: 20px;
 }
 
-.section-table div {
-    padding: 0;
-}
-
-.col-lg-2 th, tr, table, td {
-    border-bottom: 2px solid black;
-    width: 100%;
+.voorstellingen td {
+    border-bottom: 0px solid #9b9b9b;
     text-indent: 10px;
 }
 
-.col-lg-2 td, .col-lg-3 td {
-    border-bottom: 2px solid gray;
-    text-indent: 0;
-    padding: 10px;
-    font-size: 16px;
+.voorstellingen th {
+    background-color: rgba(238, 238, 238, 0.5);
+    text-indent: 10px;
+}
+
+.voorstellingen tbody tr:nth-child(even) {
+    background-color: rgba(155, 155, 155, 0.5);
+}
+
+.voorstellingen tbody tr:nth-child(odd) {
+    background-color: rgba(74, 74, 74, 0.5);
+    color: #fff;
 }
 
 .col-tijdstip {
