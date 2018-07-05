@@ -1,5 +1,5 @@
 function loadShows() {
-    jQuery.get('/allevoorstellingen', function (data) {
+    jQuery.get('/voorstellingen', function (data) {
         var shows = data;
 
         var $table = $('.section-table tbody');
@@ -23,9 +23,11 @@ function loadShows() {
 $(document).ready(loadShows);
 
 function loadShowsArtist() {
-    var artiestInvoer = $('input #artiest-invoer').val();
-    jQuery.get('/zoekopartiestnaam?naam=' + artiestInvoer, function (data) {
+    var artiestInvoer = $('#artiest-invoer').val();
+
+    jQuery.get('/voorstellingen?artiestnaam=' + artiestInvoer, function (data) {
         var shows = data;
+
         var $table = $('.section-table tbody');
         $table.empty();
         for (var i = 0; i < shows.length; i++) {
@@ -46,8 +48,9 @@ function loadShowsArtist() {
 $('#artiestbutton').click(loadShowsArtist);
 
 function loadShowsName() {
-//    var invoer = x;
-    jQuery.get('/allevoorstellingen', function (data) {
+    var voorstellingInvoer = $('#voorstelling-invoer').val();
+
+    jQuery.get('/voorstellingen?naam=' + voorstellingInvoer, function (data) {
         var shows = data;
         var $table = $('.section-table tbody');
         $table.empty();
@@ -66,11 +69,11 @@ function loadShowsName() {
     });
 }
 
-$('#artiestbutton').click(loadShowsName);
+$('#voorstellingbutton').click(loadShowsName);
 
 function loadShowsGenre() {
-//    var invoer = x;
-    jQuery.get('/allevoorstellingen', function (data) {
+    var genreInvoer = $('#genre-invoer').val();
+    jQuery.get('/voorstellingen?artiestgenre=' + genreInvoer, function (data) {
         var shows = data;
         var $table = $('.section-table tbody');
         $table.empty();
@@ -89,6 +92,6 @@ function loadShowsGenre() {
     });
 }
 
-$('#artiestbutton').click(loadShowsGenre);
+$('#genrebutton').click(loadShowsGenre);
 
 

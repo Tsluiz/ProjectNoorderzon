@@ -14,9 +14,9 @@ public class FilterOpGenre{
 	@PersistenceContext
 	private EntityManager em;
 
-	@RequestMapping(value = "/genre")
+    @RequestMapping(value = "/voorstellingen")
 	public List<Artiest> zoekOpGenre(
-			@RequestParam(value = "genre") String genre) {
+            @RequestParam(value = "artiestgenre") String genre) {
 		TypedQuery<Artiest> q = em.createQuery(
 				"SELECT a FROM Artiest a WHERE a.genre = :genre", Artiest.class);
 		q.setParameter("genre", genre);
