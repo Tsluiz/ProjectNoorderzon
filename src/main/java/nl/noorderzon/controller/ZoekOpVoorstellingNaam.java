@@ -16,7 +16,7 @@ public class ZoekOpVoorstellingNaam {
     @PersistenceContext
     private EntityManager em;
 
-    @RequestMapping(value = "/voorstellingen")
+    @RequestMapping(value = "/voorstellingen-naam")
     public List<Voorstelling> zoekOpArtiest(
             @RequestParam(value = "naam") String naam) {
         TypedQuery<Voorstelling> q = em.createQuery(
