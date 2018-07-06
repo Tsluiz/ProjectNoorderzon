@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="description" content="Noorderzon 2018 festival">
+    <meta name="keywords" content="HTML,study">
+    <meta name="author" content="Tom met wat dingetjes van Marike">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>invoer</title>
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/functions.js"></script>
+
+
+</head>
+<body>
+
+<div w3-include-html="header.html"></div>
+
+<div class="container">
+
+    <!-- Start of Row -->
+    <div class="row section">
+        <div class="col-lg-4 section-img-3"><img src="images/s-2.png">
+            <p class="section-title-3 small">in voe ren</p>
+            <p class="section-title-3 wide">invoeren</p></div>
+        <div class="col-lg-8 search-form">
+            <form action="" id="invoerProgramma" method="post" target="_self">
+                <fieldset>
+                    <h3>Voeg voorstelling toe: </h3><br/>
+                    <label class="col-lg-4 form">Artiest</label>
+                    <select class="col-lg-7 artiest" name="artiest" required>
+                        <option value="choose">Kies je artiest</option>
+
+                        <!--nog locaties toevoegen of ophalen uit de database-->
+                    </select>
+                    <br/>
+                    <label class="col-lg-4 form">Genre</label>
+                    <select class="col-lg-7 genres" name="categorie" required>
+                        <option value="volvo">Muziek</option>
+                        <!--nog genres toevoegen of ophalen uit de database-->
+                    </select>
+                    <br/>
+                    <label class="col-lg-4 form">Titel</label>
+                    <select class="col-lg-7 showtitle" name="showTitle" required>
+                        <option value="showTitle">Kies de voorstellingsnaam</option>
+                        <!--nog locaties toevoegen of ophalen uit de database-->
+                    </select>
+                    <br/>
+                    <label class="col-lg-4 form">Locatie</label>
+                    <select class="col-lg-7 locations" name="locatie" required>
+                        <option value="location">Kies de locatie</option>
+                        <!--nog locaties toevoegen of ophalen uit de database-->
+                    </select>
+                    <br/>
+                    <button class="col-lg-6 put-button" type="button" name="submit" onclick="alert('Hello World!')"
+                            formmethod="post"> Verstuur voorstelling
+                    </button>
+                    <br/>
+                </fieldset>
+                <br/>
+            </form>
+            <form action="" id="invoerArtiest" method="post" target="_self">
+                <fieldset>
+                    <h3>Voeg artiest toe: </h3><br/>
+                    <label class="col-lg-4 form">Naam</label>
+                    <input class="col-lg-7" name="artiest" placeholder="artiest" required>
+                    <br/>
+                    <label class="col-lg-4 form">Genre</label>
+                    <select class="col-lg-7 genres" name="categorie" required>
+                        <option value="genre">Kies het genre</option>
+                        <!--nog genres toevoegen of ophalen uit de database-->
+                    </select>
+                    <br/>
+                    <label class="col-lg-4 form">Titel</label>
+                    <input class="col-lg-7" name="artiest" placeholder="titel" required><br/>
+
+                    <button class="col-lg-6 put-button" type="button" name="submit" onclick="alert('Hello World!')"
+                            formmethod="post"> Verstuur artiest
+                    </button>
+                    <br/>
+                </fieldset>
+            </form>
+        </div>
+    </div> <!-- End of Row -->
+    <br/>
+
+    <!-- Start of Row -->
+    <div class="row section">
+        <div class="col-lg-4 section-img-3"><img src="images/s-1.png">
+        </div>
+        <div class="col-lg-8 search-form">
+            <form action="" id="invoerLocatie" method="post" target="_self">
+                <fieldset>
+                    <h3>Voeg locatie toe: </h3><br/>
+                    <label class="col-lg-4 form">Locatie</label>
+                    <input class="col-lg-7" name="artiest" placeholder="artiest" required>
+                    <label class="col-lg-4 form">Aantal plaatsen</label>
+                    <input class="col-lg-7" name="artiest" placeholder="bijv. 45" required>
+                    <br/>
+                    <button class="col-lg-6 put-button" type="button" name="submit" onclick="alert('Hello World!')"
+                            formmethod="post"> Verstuur locatie
+                    </button>
+                    <br/>
+                </fieldset>
+            </form>
+            <br/>
+            <form action="" id="invoerTijdstip" method="post" target="_self">
+                <fieldset>
+                    <h3>Voeg tijdstip toe: </h3><br/>
+
+                    <label class="col-lg-4 form">Dag</label>
+                    <select class="col-lg-7" name="locatie" required>
+                        <option value="monday">Maandag</option>
+                        <option value="tuesday">Dinsdag</option>
+                        <option value="wednesday">Woensdag</option>
+                        <option value="thursday">Donderdag</option>
+                        <option value="friday">Vrijdag</option>
+                        <option value="saterday">Zaterdag</option>
+                        <option value="sunday">Zondag</option>
+                        <!--nog locaties toevoegen of ophalen uit de database-->
+                    </select>
+                    <br/>
+                    <label class="col-lg-4 form">Tijd</label>
+                    <select class="col-lg-2" name="locatie" required>
+                        <option value="17h">17</option>
+                        <option value="18h">18</option>
+                        <option value="19h">19</option>
+                        <option value="20h">20</option>
+                        <option value="21h">21</option>
+                        <option value="22h">22</option>
+                        <option value="23h">23</option>
+                        <!--nog locaties toevoegen of ophalen uit de database-->
+                    </select>
+                    :
+                    <select class="col-lg-2" name="locatie" required>
+                        <option value="00m">00</option>
+                        <option value="30m">30</option>
+                        <!--nog locaties toevoegen of ophalen uit de database-->
+                    </select>
+                    <label class="col-lg-4 form">Genre</label>
+                    <select class="col-lg-7 genres" name="categorie" required>
+                        <option value="genre">Kies je genre</option>
+                        <!--nog genres toevoegen of ophalen uit de database-->
+                    </select>
+                    <br/>
+                    <button class="col-lg-6 put-button" type="button" name="submit" onclick="alert('Hello World!')"
+                            formmethod="post"> Verstuur tijdstip
+                    </button>
+                    <br/>
+                </fieldset>
+            </form>
+        </div>
+    </div> <!-- End of Row -->
+    <br/>
+    <div class="row section" id="fill-page">
+        <p class="hidden">page filling div</p>
+    </div>
+</div> <!-- End of Container -->
+
+<div w3-include-html="footer.html"></div>
+
+<script src="js/invoerFormulier.js"></script>
+<script src="js/includeHTML.js"></script>
+
+</body>
+</html>
