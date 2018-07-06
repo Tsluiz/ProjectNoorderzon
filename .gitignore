@@ -334,6 +334,7 @@ ASALocalRun/
 *.iml
 *.iws
 /bin
+*/target/*
 
 # Mac
 .DS_Store
