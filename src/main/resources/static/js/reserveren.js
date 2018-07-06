@@ -25,16 +25,23 @@ function reservering(elementId) {
             }).done(function () {
                 window.alert('Opgeslagen');
             });
+            console.log('b');
             jQuery.ajax(data._links.self.href, {
                 method: 'PUT',
                 contentType: 'application/json',
                 data: JSON.stringify({"capaciteit": capaciteitNew})
             });
+            console.log('bijna klaar');
+            location.reload();
+            /*     function stateChange(newState) {
+                     setTimeout('', 3000);
+                 };
+                 stateChange();
+                 loadShows();
+                 */
         } else {
             window.alert('kies een aantal reserveringen binnen de beschikbaarheid');
         }
     });
+
 }
-
-
-$('.reserveer').click(reservering);
