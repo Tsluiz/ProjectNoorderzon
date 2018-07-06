@@ -16,11 +16,11 @@ public class ZoekOpVoorstellingNaam {
     @PersistenceContext
     private EntityManager em;
 
-    @RequestMapping(value = "/voorstellingen")
+    @RequestMapping(value = "/voorstellingen-naam")
     public List<Voorstelling> zoekOpArtiest(
             @RequestParam(value = "naam") String naam) {
         TypedQuery<Voorstelling> q = em.createQuery(
-                "SELECT v FROM Voorstelling v WHERE v.artiest.naamVoorstelling LIKE :voorstellingnaam", Voorstelling.class);
+                "SELECT v FROM Voorstelling v WHERE v.artiest.naamVoorstelling LIKE :voorstellingnaam ORDER BY v.tijdstip.id", Voorstelling.class);
         q.setParameter("voorstellingnaam", naam);
 
         return q.getResultList();
