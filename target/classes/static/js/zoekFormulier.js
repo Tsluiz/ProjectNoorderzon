@@ -19,16 +19,16 @@ function loadShows() {
         for (var i = 0; i < shows.length; i++) {
             console.log(shows[i]);
             var id = shows[i].id;
-            var tijdstip = shows[i].tijdstip.dag.substr(0,3) + " " + shows[i].tijdstip.tijd.replace('.',':');
+            var tijdstip = shows[i].tijdstip.dag.substr(0, 3) + " " + shows[i].tijdstip.tijd.replace('.', ':');
             var artiest = shows[i].artiest.naam;
             var titel = shows[i].artiest.naamVoorstelling;
             var locatie = shows[i].artiest.locatie.naam;
             var beschikbaar = shows[i].capaciteit;
-            var resOptions = reservationOptions();
-            var resButton = '<button id="' + id+ '" class="reserveer" onclick="reservering('+id+')">Reserveer</button>';
-            var idField = '<input type="text" class="id hidden" value="' + id + '">'+id+'</input>';
+            var resOptions = reservationOptions().replace('<select>','<select id="x'+id+ '">');
+            var resButton = '<button id="' + id + '" class="reserveer" onclick="reservering(' + id + ')">Reserveer</button>';
+            var idField = '<input type="text" class="id hidden" value="' + id + '">' + id + '</input>';
 
-            var row = "<tr><td>" + tijdstip + "</td><td>" + artiest + "</td><td>" + titel + "</td><td>" + locatie + "</td><td>" + beschikbaar + " tickets</td><td>" + resOptions + resButton + idField +"</td></tr>";
+            var row = "<tr><td>" + tijdstip + "</td><td>" + artiest + "</td><td>" + titel + "</td><td>" + locatie + "</td><td>" + beschikbaar + " tickets</td><td>" + resOptions + resButton + idField + "</td></tr>";
 
             $table.append(row);
         }

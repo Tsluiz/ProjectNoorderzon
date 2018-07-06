@@ -1,18 +1,22 @@
-function reservering(buttonId) {
+function reservering(elementId) {
     console.log('start reservering');
     // var id = $(this).parent().children('input').val();
-    var button = document.getElementById(buttonId);
-    var id = button.val();
+    var button = document.getElementById(elementId);
+    console.log(button);
+    var id = button.id;
     // var id = $(this).parent().childNodes[2].val();
     console.log(id);
     id = parseInt(id);
     console.log(id);
-    var aantal = $(this).prev('select').val();
+    var select = document.getElementById('x' + elementId);
     console.log(aantal);
-
+    var aantal = parseInt(select.value);
+    console.log(aantal);
     jQuery.get('/voorstellings/' + id, function (data) {
         console.log(data);
-        var capaciteitNew = data.capaciteit - aantal;
+        var capaciteitNew = parseInt(data.capaciteit) - aantal;
+        console.log(capaciteitNew);
+        data.capaciteit = capaciteitNew;
         if (capaciteitNew >= 0) {
             jQuery.ajax('/voorstellings/' + id, {
                 method: 'PUT',
@@ -21,7 +25,7 @@ function reservering(buttonId) {
             }).done(function () {
                 window.alert('Opgeslagen');
             });
-            jQuery.ajax(data.capaciteit, {
+            jQuery.ajax(data._links.self.href, {
                 method: 'PUT',
                 contentType: 'application/json',
                 data: JSON.stringify({"capaciteit": capaciteitNew})

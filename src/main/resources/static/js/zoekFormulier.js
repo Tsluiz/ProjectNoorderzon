@@ -24,7 +24,7 @@ function loadShows() {
             var titel = shows[i].artiest.naamVoorstelling;
             var locatie = shows[i].artiest.locatie.naam;
             var beschikbaar = shows[i].capaciteit;
-            var resOptions = reservationOptions();
+            var resOptions = reservationOptions().replace('<select>', '<select id="x' + id + '">');
             var resButton = '<button id="' + id + '" class="reserveer" onclick="reservering(' + id + ')">Reserveer</button>';
             var idField = '<input type="text" class="id hidden" value="' + id + '">' + id + '</input>';
 
