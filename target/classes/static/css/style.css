@@ -59,7 +59,8 @@ table {
 /* ---------------
 reset CSS - end */
 
-body {
+
+body, button {
   font-family: Averta, sans-serif;
   font-size: 20px;
   color: #4a4a4a;
@@ -73,6 +74,7 @@ h2 {
 
 h3 {
     font-size: 30px;
+
     margin: 0 0 10px -10px;
 }
 .container {
@@ -516,8 +518,6 @@ button.put-button {
 
 }
 
-
-
 @media (max-width: 767px ) {
     .search-form button {
         width: fit-content;
@@ -635,3 +635,4 @@ button.reserveer {
 .id{
     width: 2px;
 }
+
