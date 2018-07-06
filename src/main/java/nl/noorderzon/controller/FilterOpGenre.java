@@ -18,7 +18,7 @@ public class FilterOpGenre{
     public List<Voorstelling> zoekOpGenre(
             @RequestParam(value = "genre") String genre) {
         TypedQuery<Voorstelling> q = em.createQuery(
-                "SELECT v FROM Voorstelling v WHERE v.artiest.genre = :genre", Voorstelling.class);
+				"SELECT v FROM Voorstelling v WHERE v.artiest.genre = :genre ORDER BY v.tijdstip.id", Voorstelling.class);
 		q.setParameter("genre", genre);
 		return q.getResultList();
 	}

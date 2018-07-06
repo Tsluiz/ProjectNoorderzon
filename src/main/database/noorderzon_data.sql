@@ -135,5 +135,7 @@ UNLOCK TABLES;
 
 -- Dump completed on 2018-06-29 11:51:37
 
-UPDATE voorstelling
-SET resterende_plaatsen
+UPDATE voorstelling v
+INNER JOIN artiest a ON v.artiest_id = a.id
+JOIN locatie l ON l.id = a.locatie_id
+SET v.resterende_plaatsen = l.capaciteit;

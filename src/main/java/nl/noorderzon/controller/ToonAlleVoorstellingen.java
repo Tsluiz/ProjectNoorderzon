@@ -20,7 +20,7 @@ public class ToonAlleVoorstellingen {
     public List<Voorstelling> allevoorstellingen() {
 
 		TypedQuery<Voorstelling> q = em.createQuery(
-				"SELECT v FROM Voorstelling v", Voorstelling.class);
+                "SELECT v FROM Voorstelling v ORDER BY v.tijdstip.id", Voorstelling.class);
 		return q.getResultList();
 	}
 }

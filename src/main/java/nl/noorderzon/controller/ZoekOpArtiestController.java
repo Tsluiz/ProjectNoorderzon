@@ -17,7 +17,7 @@ public class ZoekOpArtiestController {
 	public List<Voorstelling> zoekOpArtiest(
 			@RequestParam(value = "naam") String naam) {
 		TypedQuery<Voorstelling> q = em.createQuery(
-				"SELECT v FROM Voorstelling v WHERE v.artiest.naam LIKE :artiestnaam", Voorstelling.class);
+                "SELECT v FROM Voorstelling v WHERE v.artiest.naam LIKE :artiestnaam ORDER BY v.tijdstip.id", Voorstelling.class);
 		q.setParameter("artiestnaam", naam);
 
 		return q.getResultList();
