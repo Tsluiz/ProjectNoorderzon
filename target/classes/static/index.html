@@ -83,11 +83,22 @@
             <p class="section-title-3 wide">contact</p>
         </div>
         <div id="contact" class="col-lg-8 items">
-            <ul>
-                <li>Vul hier</li>
-                <li>het contact-</li>
-                <li>formulier in</li>
-            </ul>
+            <form id="formContact" action="include/mail.php" method="POST">
+                <label>Naam*
+                    <input type="text" name="name" required>
+                </label>
+                <label>E-mailadres*
+                    <input type="email" name="email" required>
+                </label>
+                <label>Telefoonnummer*
+                    <input type="number" name="phone" required>
+                </label>
+                <label>Stel je vraag
+                    <textarea type="text" name="message" rows="5"></textarea>
+                </label>
+                <input type="hidden" name="revenue" value="Empty" required>
+                <button class="buttonNeemContact" type="submit">Neem contact op</button>
+            </form>
         </div>
         <div class="col-lg-1 empty"></div>
     </div>

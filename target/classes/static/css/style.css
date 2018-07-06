@@ -59,7 +59,7 @@ table {
 /* ---------------
 reset CSS - end */
 
-body, button {
+body {
   font-family: Averta, sans-serif;
   font-size: 20px;
   color: #4a4a4a;
@@ -73,10 +73,11 @@ h2 {
 
 h3 {
     font-size: 30px;
-    margin: 0 0 0 -10px;
+    margin: 0 0 10px -10px;
 }
 .container {
     min-height: 80vh;
+    max-height: min-content;
 }
 
 /* -- Intro page --  */
@@ -153,15 +154,15 @@ h3 {
 /* -- Top menu --  */
 
 .top-bar {
-    padding: 5px 20px;
-    vertical-align: bottom;
+    padding: 10px 20px;
+    vertical-align: baseline;
     background-color: #eeeeee;
     box-shadow: 0 0 2px 2px #aaaaaa;
     position: fixed;
     width: 100vw;
     top: 0;
     z-index: 15;
-    height: 30px;
+    height: min-content;
 }
 
 .top-bar img {
@@ -171,10 +172,9 @@ h3 {
 .top-menu {
     float: right;
     color: #0acc66;
-    vertical-align: bottom;
     position: absolute;
-    bottom: 0;
     right: 20px;
+    display: inline-block;
 }
 
 @media (max-width: 767px) {
@@ -275,7 +275,7 @@ h3 {
 
 @media (max-width: 991px) {
     .section-title-3 {
-        background-color: rgba(50, 50, 50, 0.2);
+        background-color: rgba(50, 50, 50, 0.5);
         left: 0;
         top: 0;
         width: auto;
@@ -315,7 +315,7 @@ h3 {
 
 /* -- Section --  */
 .section {
-    height: 550px;
+    min-height: 550px;
 }
 
 @media (max-width: 991px) {
@@ -352,7 +352,7 @@ h3 {
 /* -- Section items --  */
 .items {
     margin: auto;
-    height: 320px;
+    height: min-content;
     z-index: 2;
 }
 
@@ -493,13 +493,30 @@ h3 {
 }
 
 .search-form button {
-    text-align: center;
-    position: absolute;
-    width: 30%;
-    border-radius: 4px;
-    background-color: #9b9b9b;
+    background-color: #4a4a4a;
     cursor: pointer;
+    color: #fff;
+    border-radius: 4px;
 }
+
+button.put-button {
+    text-align: center;
+    position: static;
+    width: 35%;
+/ / margin-top: 3 px;
+    margin: 10px 10% auto 65%;
+    color: #fff;
+    border-radius: 4px;
+    background-color: #4a4a4a;
+    cursor: pointer;
+    float: left;
+}
+
+.search-form button {
+
+}
+
+
 
 @media (max-width: 767px ) {
     .search-form button {
@@ -522,11 +539,11 @@ h3 {
     position: relative;
     bottom: 0;
     left: 0;
-    min-height: 180px;
+    max-height: min-content;
     width: 100vw;
     background-color: rgba(74, 74, 74, 0.9);
     color: #eee;
-    margin-top: -100px;
+    padding: 50px 30px 50px 30px;
 }
 
 #fill-page {
@@ -547,28 +564,38 @@ h3 {
     white-space: nowrap;
 }
 
-.section-table td {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 16px;
+.voorstellingen th {
+    font-size: 20px;
 }
 
-.section-table div {
-    padding: 0;
+@media (max-width: 992px) {
+    .voorstellingen th {
+        font-size: 17px;
+    }
+
+    .voorstellingen td {
+        font-size: 15px;
+    }
 }
 
-.col-lg-2 th, tr, table, td {
-    border-bottom: 2px solid black;
-    width: 100%;
+.voorstellingen td {
+    border-bottom: 0px solid #9b9b9b;
     text-indent: 10px;
 }
 
-.col-lg-2 td, .col-lg-3 td {
-    border-bottom: 2px solid gray;
-    text-indent: 0;
-    padding: 10px;
-    font-size: 16px;
+.voorstellingen th {
+    background-color: rgba(10, 204, 102, 0.8);
+    text-indent: 10px;
+    color: #262626;
+}
+
+.voorstellingen tbody tr:nth-child(even) {
+    background-color: rgba(10, 204, 102, 0.5);
+}
+
+.voorstellingen tbody tr:nth-child(odd) {
+    background-color: rgba(155, 155, 155, 0.5);
+    color: #4a4a4a;
 }
 
 .col-tijdstip {
@@ -591,3 +618,49 @@ h3 {
     width: 15%;
 }
 
+.genre-radio li {
+    display: inline;
+}
+
+
+/* button contact Formulier
+ */
+#formContact{
+    width: auto;
+    padding: 20px;
+    position: relative;
+}
+
+#formContact input{
+    height: 45px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: solid 1px #eeeeee;
+    width: 100%;
+    display:block;
+}
+
+#formContact label{
+    font-family: Europa, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2em;
+    letter-spacing: normal;
+    color: #222222;
+    display: block;
+    padding: 10px 0;
+}
+
+#formContact textarea{
+    display: block;
+    border: solid 1px #eeeeee;
+    width: 100%;
+    border-radius: 5px;
+}
+
+footer h5{
+    font-size: 18px;
+    font-weight: bold;
+}

@@ -17,3 +17,9 @@ $(document).ready(function(){
     animate('zoomOutUp');
   });
 });
+
+$('.buttonNeemContact').click(function(){
+    $('#bedanktForm').show('fast');
+    $('#formContact').hide('fast');
+});
+

@@ -8,11 +8,20 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
+/*
+ * Facilitates function for query 'Find Artists on Genre' where Genre is chosen on webpage and query is done on database via Spring boot
+ * @author Onze Marike
+ * @version 1001.1
+ * @param /voorstellingen the param for webpage
+ * @return Artiests matching the Genre of choice
+ * */
+
 @RestController
 public class FilterOpGenre{
 
 	@PersistenceContext
 	private EntityManager em;
+
 
     @RequestMapping(value = "/voorstellingen")
 	public List<Artiest> zoekOpGenre(
